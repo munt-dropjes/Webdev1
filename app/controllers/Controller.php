@@ -16,7 +16,7 @@ class Controller
         if (file_exists(__DIR__ . '/../views/' . $viewPath . '.php')) {
             require_once __DIR__ . '/../views/' . $viewPath . '.php';
         } else {
-            fourOFour();
+            require_once __DIR__ . '/../views/errors/404.php';
         }
 
         //default footer
@@ -25,6 +25,6 @@ class Controller
 
     public function fourOFour() : void
     {
-        $this->view('404/index', null);
+        $this->view('404/index');
     }
 }
