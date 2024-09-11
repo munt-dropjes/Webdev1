@@ -11,15 +11,5 @@
     }
   },
   "require": {
-    "bramus/router": "~1.6",
-    "firebase/php-jwt": "^6.0",
-    "chillerlan/php-qrcode": "^5.0",
-    "setasign/fpdf": "^1.8",
-    "phpmailer/phpmailer": "^6.9.1",
-    "mollie/mollie-api-php": "^2.0",
-    "ext-pdo": "*",
-    "ext-mbstring": "*",
-    "mpdf/mpdf": "^8.2.1",
-    "phpoffice/phpspreadsheet": "^1.20.0"
   }
 }
