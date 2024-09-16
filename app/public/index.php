@@ -17,8 +17,4 @@ $router->setNamespace('\Controllers');
 // default route
 $router->get('/', 'HomeController@index');
 
-// home route
-$router->get('/home', 'HomeController@index');
-
 $router->run();
-?>
