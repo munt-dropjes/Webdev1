@@ -28,10 +28,31 @@
                 <a class="nav-link" href="/home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="/about">De Groep</a>
             </li>
+            // geschiedenis
+            // fotos
+            // cadugraaf
+            <li class="nav-item">
+                <a class="nav-link" href="/welpen">Welpen</a>
+            </li>
+            // fotos
+            // programma
+            <li class="nav-item">
+                <a class="nav-link" href="/verkenners">Verkenners</a>
+            </li>
+            // fotos
+            // programma
+            // klasse eisen
+            <li class="nav-item">
+                <a class="nav-link" href="/verhuur">Verhuur</a>
+            </li>
+            // verhuur info
             <li class="nav-item">
                 <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Inloggen</a>
             </li>
         </ul>
     </nav>
