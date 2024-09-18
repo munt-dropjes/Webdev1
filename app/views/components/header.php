@@ -30,24 +30,24 @@
             <li class="nav-item">
                 <a class="nav-link" href="/about">De Groep</a>
             </li>
-            // geschiedenis
-            // fotos
-            // cadugraaf
+            <!-- geschiedenis
+            fotos
+            cadugraaf -->
             <li class="nav-item">
                 <a class="nav-link" href="/welpen">Welpen</a>
             </li>
-            // fotos
-            // programma
+            <!-- fotos
+            programma -->
             <li class="nav-item">
                 <a class="nav-link" href="/verkenners">Verkenners</a>
             </li>
-            // fotos
-            // programma
-            // klasse eisen
+            <!-- fotos
+            programma
+            klasse eisen -->
             <li class="nav-item">
                 <a class="nav-link" href="/verhuur">Verhuur</a>
             </li>
-            // verhuur info
+            <!-- verhuur info -->
             <li class="nav-item">
                 <a class="nav-link" href="/contact">Contact</a>
             </li>
