@@ -28,11 +28,13 @@
                 <a class="nav-link" href="/home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about">De Groep</a>
+                <a class="nav-link" href="/groep">De Groep</a>
             </li>
             <!-- geschiedenis
             fotos
             cadugraaf -->
+
+            <!-- speltakken dropdown menu zoals bij de willies -->
             <li class="nav-item">
                 <a class="nav-link" href="/welpen">Welpen</a>
             </li>
