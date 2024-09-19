@@ -6,14 +6,20 @@ use Services\SpeltakkenService;
 
 class SpeltakkenController extends Controller
 {
+    private $speltakkenService;
+    function __construct()
+    {
+        $this->speltakkenService = new SpeltakkenService();
+    }
+
     function welpen() : void
     {
-        $this->view('speltakken/welpen/index');
+        $this->view('speltakken/welpen/index', ['welpenInfo' => $this->speltakkenService->getWelpenInfo()]);
     }
 
     function verkenners() : void
     {
-        $this->view('speltakken/verkenners/index');
+        $this->view('speltakken/verkenners/index', ['verkennersInfo' => $this->speltakkenService->getVerkennersInfo()]);
     }
 
     function rowans() : void
