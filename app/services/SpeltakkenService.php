@@ -14,28 +14,9 @@ class SpeltakkenService
         $this->speltakkenRepository = new SpeltakkenRepository();
     }
 
-    function getWelpenInfo() : Speltak
+    function getSpeltakInfo($speltak) : Speltak
     {
-        return $this->speltakkenRepository->getWelpenInfo();
+        return $this->speltakkenRepository->getSpeltakInfo($speltak);
     }
 
-    function getVerkennersInfo() : Speltak
-    {
-        return $this->speltakkenRepository->getVerkennersInfo();
-    }
-
-    function getRowansInfo() : Speltak
-    {
-        return $this->speltakkenRepository->getRowansInfo();
-    }
-
-    function getRoversInfo() : Speltak
-    {
-        return $this->speltakkenRepository->getRoversInfo();
-    }
-
-    function getStamInfo() : Speltak
-    {
-        return $this->speltakkenRepository->getStamInfo();
-    }
 }
