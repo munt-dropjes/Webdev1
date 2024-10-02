@@ -24,6 +24,7 @@ $router->setNamespace('\Controllers');
 
     $router->get('/groep', 'GroepController@index');
 
+    //speltakken
     $router->get('/welpen', 'SpeltakkenController@welpen');
     $router->get('/verkenners', 'SpeltakkenController@verkenners');
     $router->get('/rowans', 'SpeltakkenController@rowans');
@@ -34,7 +35,10 @@ $router->setNamespace('\Controllers');
 
     $router->get('/contact', 'ContactController@index');
 
+    //authentication
     $router->get('/login', 'AuthController@login');
+    $router->post('/login', 'AuthController@login');
+
 
 // Run the router
 $router->run();

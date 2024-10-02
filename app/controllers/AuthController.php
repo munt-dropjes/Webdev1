@@ -6,11 +6,27 @@ use Services\AuthService;
 
 class AuthController extends Controller
 {
+    private AuthService $authService;
+
+    public function __construct()
+    {
+        $this->authService = new AuthService();
+    }
+
     function login() : void
     {
-        $this->view('auth/login');
+        if($_POST) {
+            try {
+                if($this->authService->login($_POST['email'], $_POST['password'])) {
+                    header('Location: /');
+                }
+            } catch (Exception $e) {
+                echo $e->getMessage(); //TODO: goes to exception service
+                $this->view('authentication/login', ['error' => $e->getMessage()]);
+            }
+        }
 
-        //if post then login
+        $this->view('authentication/login');
     }
 
     function register() : void
