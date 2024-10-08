@@ -36,8 +36,11 @@ $router->setNamespace('\Controllers');
     $router->get('/contact', 'ContactController@index');
 
     //authentication
+    $router->get('/register', 'AuthController@register');
+    $router->post('/register', 'AuthController@register');
     $router->get('/login', 'AuthController@login');
     $router->post('/login', 'AuthController@login');
+    $router->get('/logout', 'AuthController@logout');
 
 
 // Run the router

@@ -13,11 +13,28 @@ class AuthController extends Controller
         $this->authService = new AuthService();
     }
 
+    function register() : void
+    {
+        if($_POST) {
+            try {
+                if($this->authService->executeRegisterForm($_POST)) {
+                    header('Location: /');
+                }
+            } catch (Exception $e) {
+                echo $e->getMessage(); //TODO: goes to exception service
+                $this->view('authentication/register', ['error' => $e->getMessage()]);
+            }
+        }
+
+
+        $this->view('authentication/register');
+    }
+
     function login() : void
     {
         if($_POST) {
             try {
-                if($this->authService->login($_POST['email'], $_POST['password'])) {
+                if($this->authService->executeLoginForm($_POST['email'], $_POST['password'])) {
                     header('Location: /');
                 }
             } catch (Exception $e) {
@@ -29,18 +46,11 @@ class AuthController extends Controller
         $this->view('authentication/login');
     }
 
-    function register() : void
+    function logout(): void
     {
-        $this->view('auth/register');
-
-        //if post then register
-    }
-
-    function logout() : void
-    {
-        $this->view('auth/logout');
-
-        //if post then logout
+        // destroy session and redirect home
+        session_destroy();
+        header('Location: /');
     }
 
     function forgotPassword() : void
