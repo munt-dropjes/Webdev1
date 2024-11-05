@@ -1,8 +1,43 @@
-cms
+privé-inlog
+	admin
+	content
+	ledenadmin
+	jeugdlid
+		verkenners
+		welpen
+
+cms -> 	tekst
+	koppen
 
 verhuurperiodes -> kalender
-fotodatabase -> 
+verhuurfotos
 
+telefoonvriendelijk
+
+speltak
+	jaarplanning
+	fotodatabase
+
+nieuwskopje
+	lopende acties
+	verbouwing
+
+meerinfo
+	geschiedenis
+	smoelenboek
+	vertrouwenspersoon
+	privacyverklaring/AVG
+	aanmeldingsprocedure
+
+bijhouden -> speltak, nieuws
+
+aanmeldingen -> vrienden van
+		welpen
+		verkennners
+
+socials
+
+------------------------------------------------------------
 controller ln:13 remove //
 
 exception service to catch all exceptions and post to database with timestamp
