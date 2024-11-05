@@ -15,6 +15,16 @@
     -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+<?php
+    function active($currect_page){
+        $url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
+        $url = end($url_array);  
+        if($currect_page == $url){
+            echo 'nav-active'; //class name in css 
+        } 
+    }
+?>
+
 <body>
 <header>
     <div class="header-pc">
@@ -30,11 +40,11 @@
         <nav class="navigation">
             <ul class="navigation">
                 <div class="navLeft">
-                    <li class="navigation">
-                        <a class="navigation" href="/home">Home</a>
+                    <li class="navigation <?php active('home');?>">
+                        <a class="navigation <?php active('home');?>" href="/home">Home</a>
                     </li>
-                    <li class="navigation">
-                        <a class="navigation" href="/groep">De Groep</a>
+                    <li class="navigation <?php active('groep');?>">
+                        <a class="navigation <?php active('groep');?>" href="/groep">De Groep</a>
                     </li>
                     <!-- 
                         geschiedenis
@@ -47,11 +57,11 @@
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn">Speltakken</a>
                         <div class="dropdown-content">
-                            <a href="/welpen">Welpen</a>
-                            <a href="/verkenners">Verkenners</a>
-                            <a href="/rowans">Rowans</a>
-                            <a href="/rovers">Rovers</a>
-                            <a href="/stam">Stam</a>
+                            <a class="<?php active('welpen');?>" href="/welpen">Welpen</a>
+                            <a class="<?php active('verkenners');?>" href="/verkenners">Verkenners</a>
+                            <a class="<?php active('rowans');?>" href="/rowans">Rowans</a>
+                            <a class="<?php active('rovers');?>" href="/rovers">Rovers</a>
+                            <a class="<?php active('stam');?>" href="/stam">Stam</a>
                         </div>
                         <!--  welpen 
                             fotos
@@ -65,15 +75,15 @@
                     </li>
                 </div>
                 <div class="navRight">
-                    <li class="navigation">
-                        <a class="navigation" href="/verhuur">Verhuur</a>
+                    <li class="navigation <?php active('verhuur');?>">
+                        <a class="navigation <?php active('verhuur');?>" href="/verhuur">Verhuur</a>
                     </li>
                     <!-- verhuur info -->
-                    <li class="navigation">
-                        <a class="navigation" href="/contact">Contact</a>
+                    <li class="navigation <?php active('contact');?>">
+                        <a class="navigation <?php active('contact');?>" href="/contact">Contact</a>
                     </li>
-                    <li class="navigation">
-                        <a class="navigation" href="/login">Inloggen</a>
+                    <li class="navigation <?php active('login');?>">
+                        <a class="navigation <?php active('login');?>" href="/login">Inloggen</a>
                     </li>
                 </div>
             </ul>
