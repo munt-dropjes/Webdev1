@@ -209,8 +209,8 @@ li a, .dropbtn {
             margin: 0;
             padding: 0.5em 0;
             width: 100%;
-            color: white;
-            background-color: #CEDFED
+            color: black;
+            background: rgb(255, 248, 237);
         }
 
         .menu>li:not(:last-child) {

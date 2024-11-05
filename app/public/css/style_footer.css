@@ -1,0 +1,103 @@
+footer {
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    position: absolute;
+}
+
+.footer-pc {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 248, 237, .75);
+    margin-top: 5%;
+    height: 100px;
+}
+
+.footer-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2.5%;
+}
+
+.footer-info-left {
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+
+.footer-info-right {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.footer-info-left h6 {
+    margin-bottom: 0;
+    margin-left: 2.5%;
+    font-size: large;
+}
+
+.footer-info-right h6 {
+    margin-bottom: 0;
+    margin-left: 2.5%;
+    font-size: large;
+}
+
+/* media screen for mobile devices */
+@media only screen and (max-width: 480px)  {
+    .footer-pc{
+        display: none;
+      }
+      
+      .footer-mobile{
+          display: flex;
+          justify-content: space-around;
+          background: rgba(255, 248, 237, .75);
+          height: 75px;
+          align-items: center;
+          position:initial;
+          margin-top: 5%;
+      }
+}
+
+
+/* media screen for tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px)  {
+    .footer{
+        display: none;
+      }
+      
+      .footer-mobile{
+          display: flex;
+          justify-content: space-around;
+          background: rgba(255, 248, 237, .75);
+          height: 75px;
+          align-items: center;
+          position:initial;
+          margin-top: 5%;
+      }
+}
+
+/* media screen for smalscreen, laptops */
+@media only screen and (min-width: 769px) and (max-width: 1024px)  {
+    .footer-mobile{
+        display: none;
+    }
+}
+
+/* media screen for Desktops, large screens */
+@media only screen and (min-width: 1025px) and (max-width: 1200px)  {
+    .footer-mobile{
+        display: none;
+    }
+}
+
+/* media screen for extra large screens */
+@media only screen and (min-width: 1201px) {
+    .footer-mobile{
+        display: none;
+    }
+}

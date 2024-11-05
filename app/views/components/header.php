@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style_main.css">
     <link rel="stylesheet" href="css/style_header.css">
+    <link rel="stylesheet" href="css/style_footer.css">
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     -->
@@ -20,7 +21,7 @@
         $url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
         $url = end($url_array);  
         if($currect_page == $url){
-            echo 'nav-active'; //class name in css 
+            echo 'nav-active'; //class name in style_header.css 
         } 
     }
 ?>
@@ -30,10 +31,10 @@
     <div class="header-pc">
         <div class="header-banner">
             <a href="/home">
-                <img src="img/header-02.png" alt="Afbeelding is niet zichtbaar">
+                <img src="img/header/header-02.png" alt="Afbeelding is niet zichtbaar">
             </a>    
             <a class="img-link" href="index.php">
-                <img src="img/header-03.png" alt="#">   
+                <img src="img/header/header-03.png" alt="#">   
             </a>    
         </div>
 
@@ -82,9 +83,18 @@
                     <li class="navigation <?php active('contact');?>">
                         <a class="navigation <?php active('contact');?>" href="/contact">Contact</a>
                     </li>
-                    <li class="navigation <?php active('login');?>">
-                        <a class="navigation <?php active('login');?>" href="/login">Inloggen</a>
-                    </li>
+                    <?php if(isset($_SESSION['user'])): ?>
+                        <li class="navigation" <?php active('account');?>">
+                            <a class="navigation <?php active('account');?>" href="/account">Account</a>
+                        </li>
+                        <li class="navigation <?php active('logout');?>">
+                            <a class="navigation <?php active('logout');?>" href="/logout">Uitloggen</a>
+                        </li>
+                    <?php else: ?>
+                        <li class="navigation <?php active('login');?>">
+                            <a class="navigation <?php active('login');?>" href="/login">Inloggen</a>
+                        </li>
+                    <?php endif; ?>
                 </div>
             </ul>
         </nav>

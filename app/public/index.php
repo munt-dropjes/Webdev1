@@ -41,7 +41,7 @@ $router->setNamespace('\Controllers');
     $router->get('/login', 'AuthController@login');
     $router->post('/login', 'AuthController@login');
     $router->get('/logout', 'AuthController@logout');
-
+    $router->get('/account', 'UserController@account');
 
 // Run the router
 $router->run();
