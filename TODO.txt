@@ -1,4 +1,6 @@
-privé-inlog
+update layout en style en dat t er weer hip uitziet
+
+privé-inlog -> cameronsmail
 	admin
 	content
 	ledenadmin
@@ -9,14 +11,17 @@ privé-inlog
 cms -> 	tekst
 	koppen
 
-verhuurperiodes -> kalender
-verhuurfotos
+verhuur 
+	kalender
+	fotos
+	update tekst
 
 telefoonvriendelijk
 
 speltak
 	jaarplanning
 	fotodatabase
+	verkennerboekjes
 
 nieuwskopje
 	lopende acties
@@ -36,6 +41,8 @@ aanmeldingen -> vrienden van
 		verkennners
 
 socials
+
+ledenadmin
 
 ------------------------------------------------------------
 controller ln:13 remove //
