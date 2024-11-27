@@ -7,6 +7,7 @@ class User{
     public string $name;
     public string $email;
     public string $password;
+    public string $role;
     // public ?string $token;
 
     // // voor de foto's, zodat je alleen fotos laat zien van eigen jaren
@@ -28,10 +29,11 @@ class User{
     // public ?string stamStart;
     // public ?string stamEind;
 
-    public function __construct(string $id = "", string $name = "", string $email = "", string $password = ""){
+    public function __construct(string $id = "", string $name = "", string $email = "", string $password = "", string $role = ""){
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
+        $this->role = $role;
     }
 }

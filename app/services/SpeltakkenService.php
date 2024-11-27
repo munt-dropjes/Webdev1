@@ -8,7 +8,6 @@ use Models\Speltak;
 class SpeltakkenService
 {
     private $speltakkenRepository;
-
     function __construct()
     {
         $this->speltakkenRepository = new SpeltakkenRepository();

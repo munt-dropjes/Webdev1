@@ -12,10 +12,19 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $router = new Router();
 $router->setNamespace('\Controllers');
 
+// for cms routes, check if user is authenticated
+$router->before('GET', '/cms/.*', function () {
+    if (!isset($_SESSION['user']) || $_SESSION['user']-> role !== 'admin' || $_SESSION['user']-> role !== 'content') {	
+        header('Location: /login');
+        exit();
+    }
+});
+
+
+
 // for more info visit: https://github.com/bramus/router
 // route setup is like this:
 // $router->get('/YOURPATH', 'YOURCONTROLLER@YOURFUNCTION');
-
 
 // Add your routes here:
 // default route
