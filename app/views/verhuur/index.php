@@ -8,17 +8,19 @@
                 <th> Eind datum </th>
                 <th> Beschikbaarheid </th>
             </tr>
+            <?php foreach ($verhuurInfo->verhuurData as $verhuurData) : ?>
                 <tr>
-                    <td> <?=$verhuurInfo->verhuurWeek?> </td>
-                    <td> <?=$verhuurInfo->startDatum?> </td>
-                    <td> <?=$verhuurInfo->eindDatum?> </td>
+                    <td> <?=$verhuurData->verhuurWeek?> </td>
+                    <td> <?=$verhuurData->startDatum?> </td>
+                    <td> <?=$verhuurData->eindDatum?> </td>
                     <td> <?php
-                        if ($verhuurInfo->beschikbaarheid)
+                        if ($verhuurData->beschikbaarheid)
                             echo "Beschikbaar";
                         else 
                             echo "Niet beschikbaar";                
                     ?> </td>
                 </tr>
+            <?php endforeach; ?>
         </table>
     </div>
 </div>

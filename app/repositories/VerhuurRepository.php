@@ -3,6 +3,7 @@
 namespace Repositories;
 
 use Models\VerhuurInfo;
+use Models\VerhuurData;
 use PDO;
 
 class VerhuurRepository extends BaseRepository
@@ -13,7 +14,7 @@ class VerhuurRepository extends BaseRepository
             $stmt = $this->connection->prepare('SELECT v.id, v.beginDatum, v.eindDatum, v.beschikbaar
                                         FROM VerhuurInfo AS v');
             $stmt->execute();
-            $obj = $stmt->fetch(PDO::FETCH_OBJ);
+            $obj = $stmt->fetchAll(PDO::FETCH_OBJ);
             return $this->createVerhuurInfo($obj);
         } catch (Exception $e) {
             throw new Exception(
@@ -24,11 +25,19 @@ class VerhuurRepository extends BaseRepository
 
     private function createVerhuurInfo($obj) : VerhuurInfo
     {
-        return new VerhuurInfo(
-            $obj->id ?? null,
-            $obj->beginDatum ?? "404",
-            $obj->eindDatum ?? "Er is nog geen informatie beschikbaar",
-            $obj->beschikbaar ?? false
-        );
+        $array = [];
+
+        foreach($obj as $row) {
+            $verhuurData = new VerhuurData(
+                $row->id ?? "404",
+                $row->beginDatum ?? "",
+                $row->eindDatum ?? "",
+                $row->beschikbaar ?? ""
+            );
+           
+            array_push($array, $verhuurData);
+        };
+
+        return new VerhuurInfo($array);
     }
 }

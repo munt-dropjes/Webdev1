@@ -4,16 +4,10 @@ namespace Models;
 
 class VerhuurInfo 
 {
-    public int $verhuurWeek;
-    public ?string $startDatum;
-    public ?string $eindDatum;
-    public bool $beschikbaarheid;
+    public array $verhuurData;
 
-    function __construct($verhuurWeek, $startDatum, $eindDatum, $beschikbaarheid)
+    function __construct($verhuurData)
     {
-        $this->verhuurWeek = $verhuurWeek;
-        $this->startDatum = $startDatum;
-        $this->eindDatum = $eindDatum;
-        $this->beschikbaarheid = $beschikbaarheid;
+        $this->verhuurData = $verhuurData;
     }
 }
