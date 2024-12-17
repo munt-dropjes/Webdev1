@@ -36,4 +36,21 @@ class SpeltakkenController extends Controller
     {
         $this->view('speltakken/index', ['speltakInfo' => $this->speltakkenService->getSpeltakInfo("Stam")]);
     }
+
+    function programma($speltakNaam) : void
+    {
+        console_log("hallotjes");
+
+        $this->view('speltakken/programma', ['jaarplanning' => $this->speltakkenService->getProgramma($speltakNaam)]);
+    }
+
+    function foto($speltakNaam) : void
+    {
+        $this->view('speltakken/foto', ['foto' => $this->speltakkenService->getFoto($speltakNaam)]);
+    }
+
+    function boekjes($speltakNaam) : void
+    {
+        $this->view('speltakken/boekjes', ['boekjes' => $this->speltakkenService->getBoekjes($speltakNaam)]);
+    }
 }

@@ -102,7 +102,7 @@ li a, .dropbtn {
         align-items: center;
         justify-content: space-between;
         background: rgba(255, 248, 237, .75);
-        color: white;
+        color: black;
         height: 50px;
         padding: 1em;
         border-bottom: 1px solid blue;
@@ -139,7 +139,7 @@ li a, .dropbtn {
     .menu-button::before,
     .menu-button::after {
         display: block;
-        background-color: #fff;
+        background-color: black;
         position: absolute;
         height: 4px;
         width: 30px;

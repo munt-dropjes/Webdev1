@@ -44,17 +44,17 @@
                     <li class="navigation <?php active('home');?>">
                         <a class="navigation <?php active('home');?>" href="/home">Home</a>
                     </li>
-                    <li class="navigation <?php active('groep');?>">
-                        <a class="navigation <?php active('groep');?>" href="/groep">De Groep</a>
+                    <li class="dropdown">
+                        <a href="/groep" class="dropbtn">De Groep</a>
+                        <div class="dropdown-content">
+                            <a class="<?php active('geschiedenis');?>" href="/geschiedenis">Geschiedenis</a>
+                            <a class="<?php active('cadugraaf');?>" href="/cadugraaf">Cadugraaf</a>
+                            <a class="<?php active('smoelenboek');?>" href="/smoelenboek">Smoelenboek</a>
+                            <a class="<?php active('vertrouwenspersoon');?>" href="/vertrouwenspersoon">Vertrouwenspersoon</a>
+                            <a class="<?php active('privacy');?>" href="/privacy">Privacyverklaring</a>
+                            <a class="<?php active('aanmelding');?>" href="/aanmelding">Aanmeldingsprocedure</a>
+                        </div>
                     </li>
-                    <!-- 
-                        geschiedenis
-                        cadugraaf 
-                        smoelenboek
-                        vertrouwenspersoon
-                        privacy verklaring
-                        aanmeldingsprocedure
-                    -->
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn">Speltakken</a>
                         <div class="dropdown-content">
@@ -109,16 +109,36 @@
                 <div class="menu-button"></div>
             </label>
             <ul class="menu">
-                <li href="/home">Home</li>
-                <li href="/groep">De Groep</li>
-                <li href="/welpen">Welpen</li>
-                <li href="/verkenners">Verkenners</li>
-                <li href="/rowans">Rowans</li>
-                <li href="/rovers">Rovers</li>
-                <li href="/stam">Stam</li>
-                <li href="/verhuur">Verhuur</li>
-                <li href="/contact">Contact</li>
-                <li href="/login">Inloggen</li>
+                <li>
+                    <a href="/home">Home</a>
+                </li>
+                <li>
+                    <a href="/groep">De Groep</a>
+                </li>
+                <li>
+                    <a href="/welpen">Welpen</a>
+                </li>
+                <li>
+                    <a href="/verkenners">Verkenners</a>
+                </li>
+                <li>
+                    <a href="/rowans">Rowans</a>
+                </li>
+                <li>
+                    <a href="/rovers">Rovers</a>
+                </li>
+                <li>
+                    <a href="/stam">Stam</a>
+                </li>
+                <li>
+                    <a href="/verhuur">Verhuur</a>
+                </li>
+                <li> 
+                    <a href="/contact">Contact</a>
+                </li>
+                <li>
+                    <a href="/login">Inloggen</a>
+                </li>
             </ul>
         </section>
     </div>

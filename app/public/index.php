@@ -28,10 +28,18 @@ $router->before('GET', '/cms/.*', function () {
 
 // Add your routes here:
 // default route
+    //home
     $router->get('/', 'HomeController@index');
     $router->get('/home', 'HomeController@index');
 
+    //de groep
     $router->get('/groep', 'GroepController@index');
+    $router->get('/geschiedenis', 'GroepController@geschiedenis');
+    $router->get('/cadugraaf', 'GroepController@cadugraaf');
+    $router->get('/smoelenboek', 'GroepController@smoelenboek');
+    $router->get('/vertrouwenspersoon', 'GroepController@vertrouwenspersoon');
+    $router->get('/privacy', 'GroepController@privacy');
+    $router->get('/aanmelding', 'GroepController@aanmelding');
 
     //speltakken
     $router->get('/welpen', 'SpeltakkenController@welpen');
@@ -39,12 +47,17 @@ $router->before('GET', '/cms/.*', function () {
     $router->get('/rowans', 'SpeltakkenController@rowans');
     $router->get('/rovers', 'SpeltakkenController@rovers');
     $router->get('/stam', 'SpeltakkenController@stam');
+        $router->get('/.*/programma', 'SpeltakkenController@programma(.*?)');
+        $router->get('/.*/foto', 'SpeltakkenController@foto');
+        $router->get('/.*/boekjes', 'SpeltakkenController@boekjes');
 
+    //verhuur
     $router->get('/verhuur', 'VerhuurController@index');
 
+    //contact
     $router->get('/contact', 'ContactController@index');
 
-    //authentication
+    //authenticatie
     $router->get('/register', 'AuthController@register');
     $router->post('/register', 'AuthController@register');
     $router->get('/login', 'AuthController@login');
