@@ -18,4 +18,19 @@ class SpeltakkenService
         return $this->speltakkenRepository->getSpeltakInfo($speltak);
     }
 
+    function getProgramma($speltak) : array
+    {
+        return $this->speltakkenRepository->getProgramma($speltak);
+    }
+
+    function getFoto($speltak) : array
+    {
+        return $this->speltakkenRepository->getFoto($speltak);
+    }
+
+    function getBoekjes($speltak) : array
+    {
+        return $this->speltakkenRepository->getBoekjes($speltak);
+    }
+
 }

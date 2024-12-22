@@ -47,7 +47,7 @@ $router->before('GET', '/cms/.*', function () {
     $router->get('/rowans', 'SpeltakkenController@rowans');
     $router->get('/rovers', 'SpeltakkenController@rovers');
     $router->get('/stam', 'SpeltakkenController@stam');
-        $router->get('/.*/programma', 'SpeltakkenController@programma(.*?)');
+        $router->get('/.*/programma', 'SpeltakkenController@programma');
         $router->get('/.*/foto', 'SpeltakkenController@foto');
         $router->get('/.*/boekjes', 'SpeltakkenController@boekjes');
 

@@ -37,20 +37,32 @@ class SpeltakkenController extends Controller
         $this->view('speltakken/index', ['speltakInfo' => $this->speltakkenService->getSpeltakInfo("Stam")]);
     }
 
-    function programma($speltakNaam) : void
+    function programma() : void
     {
-        console_log("hallotjes");
+        $speltakNaam = $this->getSpeltakNaam();
+
+        echo $speltakNaam;
 
         $this->view('speltakken/programma', ['jaarplanning' => $this->speltakkenService->getProgramma($speltakNaam)]);
     }
 
-    function foto($speltakNaam) : void
+    function foto() : void
     {
+        $speltakNaam = $this->getSpeltakNaam();
+
         $this->view('speltakken/foto', ['foto' => $this->speltakkenService->getFoto($speltakNaam)]);
     }
 
-    function boekjes($speltakNaam) : void
+    function boekjes() : void
     {
+        $speltakNaam = $this->getSpeltakNaam();
+
         $this->view('speltakken/boekjes', ['boekjes' => $this->speltakkenService->getBoekjes($speltakNaam)]);
+    }
+
+    private function getSpeltakNaam() : string
+    {
+        $url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
+        return $url_array[1]; //gets speltak in url: www.example.com/SPELTAK/FUNCTIE
     }
 }
