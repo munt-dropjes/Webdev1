@@ -40,11 +40,11 @@ a.navigation {
     text-decoration: none;
 }
 
-li:hover, .dropdown:hover .dropbtn {
+li.navigation:hover, .dropdown:hover .dropbtn {
     background-color: rgb(221, 135, 0);
 }
 
-li:last-child {
+li.navigation:last-child {
     float: right;
 }
 
@@ -60,7 +60,7 @@ li:last-child {
     width: 35%;
 }
 
-li a, .dropbtn {
+li a.navigation, .dropbtn {
     display: inline-block;
     color: black;
     text-align: center;
@@ -85,7 +85,9 @@ li a, .dropbtn {
     text-align: left;
 }
   
-.dropdown-content a:hover {background-color: rgb(221, 135, 0);}
+.dropdown-content a:hover {
+    background-color: rgb(221, 135, 0);
+}
   
 .dropdown:hover .dropdown-content {
     display: block;

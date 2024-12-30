@@ -1,3 +1,4 @@
+/* All the following are for the main layout of the website */
 html {
     background-image: url('../img/background.jpg');
     background-size: cover;
@@ -12,9 +13,10 @@ body {
 }
 
 main {
-    margin-top: 20px;
+    margin-top: 2vh;
     margin-right: 5vw;
     margin-left: 5vw;
+    margin-bottom: 2vh;
     background: rgba(255, 248, 237, .75);
     border-radius: 25px;
 }
@@ -26,8 +28,41 @@ main {
     padding-bottom: 1vh;
 }
 
+/* All the following are for the typography */
+a {
+    color: #638420;
+    font-weight: bold;
+}
+main{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
 h1 {
     text-align: center;
     font-size: 2.5em;
     color: #444444;
+}
+h2{
+    color: #444444;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    font-size: 22.4px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+}
+h3{
+    color: #333333;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    font-style: italic;
+    font-size: 13px;
+}
+h4 {
+    color:#333333;
+    text-decoration: underline;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
 }

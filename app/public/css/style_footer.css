@@ -1,16 +1,12 @@
 footer {
     width: 100%;
     bottom: 0;
-    height: 0;
-    position: absolute;
 }
 
 .footer-pc {
     display: flex;
     justify-content: space-between;
-    background: rgba(255, 248, 237, .75);
-    margin-top: 5%;
-    height: 100px;
+    background: rgb(255, 248, 237);
 }
 
 .footer-info {
