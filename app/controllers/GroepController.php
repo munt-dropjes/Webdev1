@@ -18,22 +18,22 @@ class GroepController extends Controller
 
     function cadugraaf() : void
     {
-        $this->view('groep/cadugraaf');
+        $this->view('groep/cadugraaf', ['cadugraaf' => $this->groepService->getCadugraaf()]);
     }
 
     function smoelenboek() : void
     {
-        $this->view('groep/smoelenboek');
+        $this->view('groep/smoelenboek', ['smoelenboek' => $this->groepService->getSmoelenboek()]);
     }
 
     function vertrouwenspersoon() : void
     {
-        $this->view('groep/vertrouwenspersoon');
+        $this->view('groep/vertrouwenspersoon', ['vertrouwenspersoon' => $this->groepService->getVertrouwenspersoon()]);
     }
 
     function privacy() : void
     {
-        $this->view('groep/privacy');
+        $this->view('groep/privacy', ['privacy' => $this->groepService->getPrivacy()]);
     }
 
     function aanmelding() : void

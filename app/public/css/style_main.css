@@ -66,3 +66,27 @@ h4 {
     padding-bottom: 0px;
     margin-bottom: 5px;
 }
+
+/* All the following are for the verhuur */
+table.verhuur {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px;
+}
+tr.verhuur {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th.verhuur {
+    background-color: rgb(221, 135, 0);
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+}
+td.verhuur {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
