@@ -41,9 +41,7 @@ class SpeltakkenController extends Controller
     {
         $speltakNaam = $this->getSpeltakNaam();
 
-        echo $speltakNaam;
-
-        $this->view('speltakken/programma', ['jaarplanning' => $this->speltakkenService->getProgramma($speltakNaam)]);
+        $this->view('speltakken/programma', ['programma' => $this->speltakkenService->getProgramma($speltakNaam)]);
     }
 
     function foto() : void
@@ -63,6 +61,6 @@ class SpeltakkenController extends Controller
     private function getSpeltakNaam() : string
     {
         $url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
-        return $url_array[1]; //gets speltak in url: www.example.com/SPELTAK/FUNCTIE
+        return $url_array[1]; //gets speltak in url: www.example.com/SPELTAK/DETAIL
     }
 }

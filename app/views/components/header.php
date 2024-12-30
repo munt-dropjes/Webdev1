@@ -31,11 +31,11 @@
     <div class="header-pc">
         <div class="header-banner">
             <a href="/home">
-                <img src="img/header/header-02.png" alt="Afbeelding is niet zichtbaar">
+                <img class="banner-img" src="img/header/header-new.svg" alt="Afbeelding is niet zichtbaar">
             </a>    
-            <a class="img-link" href="index.php">
-                <img src="img/header/header-03.png" alt="#">   
-            </a>    
+            <!-- <a class="img-link" href="index.php">
+                <img class="banner-line" src="img/header/header-03.png" alt="#">   
+            </a>     -->
         </div>
 
         <nav class="navigation">
