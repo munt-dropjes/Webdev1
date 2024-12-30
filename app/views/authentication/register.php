@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 100px;">
+<div class="content">
     <div class="row">
         <div class="col">
             <h2>Registeren</h2>
@@ -23,7 +23,7 @@
                     <p class="text-danger"><?php echo $error ?? ''; ?></p>
                 </div>
                 <button type="submit" class="btn btn-primary">Sign up</button>
-                Already have an account? <a href="/auth/login">Log in</a>
+                Already have an account? <a href="/login">Log in</a>
             </form>
         </div>
     </div>

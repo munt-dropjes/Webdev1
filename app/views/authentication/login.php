@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 100px;">
+<div class="content">
     <div class="row">
         <div class="col">
             <h2>Log in</h2>

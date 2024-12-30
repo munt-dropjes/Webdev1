@@ -2,7 +2,7 @@ nav {
     margin-left: 0;
     margin-right: 0;
     padding: 0;
-    background: rgba(255, 248, 237, .75);
+    background: rgb(255, 248, 237);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.3em;
 }
@@ -25,8 +25,8 @@ li.navigation, li.dropdown {
 }
   
 .nav-active {
-    background-color: blue;
-    color: red !important;
+    background: rgb(221, 135, 0);
+    color: white !important;
 }
 
 div.navigation {
@@ -41,7 +41,7 @@ a.navigation {
 }
 
 li:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgb(221, 135, 0);
 }
 
 li:last-child {
@@ -71,7 +71,7 @@ li a, .dropbtn {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgb(255, 248, 237);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -85,7 +85,7 @@ li a, .dropbtn {
     text-align: left;
 }
   
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {background-color: rgb(221, 135, 0);}
   
 .dropdown:hover .dropdown-content {
     display: block;

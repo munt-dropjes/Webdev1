@@ -1,4 +1,4 @@
-<div>
+<div class="content">
     <h1>Verhuur</h1>
     <div>
         <table>

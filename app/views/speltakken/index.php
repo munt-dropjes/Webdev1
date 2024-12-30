@@ -4,7 +4,7 @@
 
 ?>
 
-<div>
+<div class="content">
     <h1><?=$speltakInfo->naam?></h1>
     <div>
         <?php if ($speltakInfo->naam != "Stam") : ?>
