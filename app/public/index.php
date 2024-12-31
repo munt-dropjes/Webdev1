@@ -12,8 +12,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $router = new Router();
 $router->setNamespace('\Controllers');
 
-// for cms routes, check if user is authenticated
-$router->before('GET', '/cms/.*', function () {
+// for admin routes, check if user is authenticated
+$router->before('GET', '/admin/.*', function () {
     if (!isset($_SESSION['user']) || $_SESSION['user']-> role !== 'admin' || $_SESSION['user']-> role !== 'content') {	
         header('Location: /login');
         exit();
@@ -64,6 +64,9 @@ $router->before('GET', '/cms/.*', function () {
     $router->post('/login', 'AuthController@login');
     $router->get('/logout', 'AuthController@logout');
     $router->get('/account', 'UserController@account');
+
+    //admin
+    $router->get('/admin', 'AdminController@index');
 
 // Run the router
 $router->run();

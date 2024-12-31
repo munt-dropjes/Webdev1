@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home Page</title>
+    <title>WIP Camerons-Duinzwervers</title>
     
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style_header.css">
@@ -75,8 +75,8 @@
                         <a class="navigation <?php active('contact');?>" href="/contact">Contact</a>
                     </li>
                     <?php if(isset($_SESSION['user'])): ?>
-                        <li class="navigation" <?php active('account');?>">
-                            <a class="navigation <?php active('account');?>" href="/account">Account</a>
+                        <li class="navigation <?php active('admin');?>">
+                            <a class="navigation <?php active('admin');?>" href="/admin">Admin</a>
                         </li>
                         <li class="navigation <?php active('logout');?>">
                             <a class="navigation <?php active('logout');?>" href="/logout">Uitloggen</a>
@@ -127,9 +127,18 @@
                 <li> 
                     <a href="/contact">Contact</a>
                 </li>
-                <li>
-                    <a href="/login">Inloggen</a>
-                </li>
+                <?php if(isset($_SESSION['user'])): ?>
+                        <li>">
+                            <a href="/admin">Admin</a>
+                        </li>
+                        <li>
+                            <a href="/logout">Uitloggen</a>
+                        </li>
+                    <?php else: ?>
+                        <li>
+                            <a href="/login">Inloggen</a>
+                        </li>
+                    <?php endif; ?>
             </ul>
         </section>
     </div>
