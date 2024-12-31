@@ -4,6 +4,8 @@ footer {
 }
 
 .footer-pc {
+    padding-right: 5vw;
+    padding-left: 5vw;
     display: flex;
     justify-content: space-between;
     background: rgb(255, 248, 237);
@@ -32,14 +34,10 @@ footer {
 
 .footer-info-left h6 {
     margin-bottom: 0;
-    margin-left: 2.5%;
-    font-size: large;
 }
 
 .footer-info-right h6 {
     margin-bottom: 0;
-    margin-left: 2.5%;
-    font-size: large;
 }
 
 /* media screen for mobile devices */

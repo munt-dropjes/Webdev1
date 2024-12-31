@@ -44,8 +44,8 @@
                     <li class="navigation <?php active('home');?>">
                         <a class="navigation <?php active('home');?>" href="/home">Home</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="/groep" class="dropbtn">De Groep</a>
+                    <li class="navigation dropdown <?php active('groep');active('geschiedenis');active('cadugraaf');active('smoelenboek');active('vertrouwenspersoon');active('privacy');active('aanmelding');?>">
+                        <a href="/groep" class="navigation dropbtn <?php active('groep');active('geschiedenis');active('cadugraaf');active('smoelenboek');active('vertrouwenspersoon');active('privacy');active('aanmelding');?>">De Groep</a>
                         <div class="dropdown-content">
                             <a class="<?php active('geschiedenis');?>" href="/geschiedenis">Geschiedenis</a>
                             <a class="<?php active('cadugraaf');?>" href="/cadugraaf">Cadugraaf</a>
@@ -55,8 +55,8 @@
                             <a class="<?php active('aanmelding');?>" href="/aanmelding">Aanmeldingsprocedure</a>
                         </div>
                     </li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Speltakken</a>
+                    <li class="navigation dropdown <?php active('welpen');active('verkenners');active('rowans');active('rovers');active('stam');?>">
+                        <a href="javascript:void(0)" class="navigation dropbtn <?php active('welpen');active('verkenners');active('rowans');active('rovers');active('stam');?>">Speltakken</a>
                         <div class="dropdown-content">
                             <a class="<?php active('welpen');?>" href="/welpen">Welpen</a>
                             <a class="<?php active('verkenners');?>" href="/verkenners">Verkenners</a>
@@ -64,15 +64,6 @@
                             <a class="<?php active('rovers');?>" href="/rovers">Rovers</a>
                             <a class="<?php active('stam');?>" href="/stam">Stam</a>
                         </div>
-                        <!--  welpen 
-                            fotos
-                            programma 
-                        -->
-                        <!-- verkenners
-                            fotos
-                            programma
-                            klasse eisen 
-                        -->
                     </li>
                 </div>
                 <div class="navRight">

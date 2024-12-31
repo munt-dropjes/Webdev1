@@ -15,7 +15,7 @@
     <img class="center" id="width" src="afbeeldingen/verhuur/verh_003.jpg" alt="TODO: Foto van het terrein">
     <p class="img-p">Een kijkje in de kampvuurkuil op het terrein.</p>
 
-    <h1>Beschikbaarheid ACII</h1>
+    <h2>Beschikbaarheid ACII</h2>
 
     In de zomermaanden wordt ons clubhuis en terrein verhuurd. Verhuur in weekenden en andere periodes dan hieronder aangegeven is niet mogelijk!
     In onderstaand overzicht kun je zien wanneer er nog plaats is. 

@@ -6,13 +6,13 @@
                 <a href="/contact">
                     <img height="30px" src="img/footer/home.png" alt="Afbeelding is niet zichtbaar">
                 </a>
-                <h6>Duinlustweg 20, Overveen</h6>
+                <h5>Duinlustweg 20, Overveen</h5>
             </div>
             <div class="footer-info-right">
                 <a href="https://www.instagram.com/camerons.duinzwervers/">
                     <img height="30px" src="img/footer/instagram.png" alt="Afbeelding is niet zichtbaar">
                 </a>
-                <h6>@camerons.duinzwervers</h6>
+                <h5>@camerons.duinzwervers</h5>
             </div>
             <div class="footer-info-left">
             </div>
@@ -20,7 +20,7 @@
                 <a href="https://www.facebook.com/cameronsduinzwervers/">
                     <img height="30px" src="img/footer/facebook.png" alt="Afbeelding is niet zichtbaar">
                 </a>
-                <h6>/cameronsduinzwervers</h6>
+                <h5>/cameronsduinzwervers</h5>
             </div>                
         </div>
     </div>

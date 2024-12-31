@@ -1,9 +1,8 @@
 <?php
 
-        include_once "navigation.php";
+    include_once "speltak-navigation.php";
 
 ?>
-
 <div class="content">
     <h1><?=$speltakInfo->naam?></h1>
     <div>
