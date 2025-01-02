@@ -4,6 +4,7 @@
 
 <div class="content admin-content">
     <h1>Admin</h1>
+
     <div class="admin">
         <div class="admin__item">
             <a href="/admin/leden">Leden</a>

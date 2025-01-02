@@ -22,9 +22,10 @@ class UserRepository extends BaseRepository
     public function fetchOneByEmail($email): User|null
     {
         try {
-            $stmt = $this->connection->prepare('SELECT u.id, u.name, u.email, u.password
-                                            FROM Users AS u
-                                            WHERE email = ?');
+            $stmt = $this->connection->prepare('SELECT u.id, u.name, u.email, u.password, r.role
+                                                FROM Users AS u
+                                                JOIN Roles AS r ON u.roleId = r.id
+                                                WHERE u.email = ?');
             $stmt->execute([$email]);
             $obj = $stmt->fetch(PDO::FETCH_OBJ);
             return $this->createUserFromObject($obj);
@@ -43,7 +44,8 @@ class UserRepository extends BaseRepository
             $obj->id ?? 0,
             $obj->name ?? "",
             $obj->email ?? "",
-            $obj->password ?? ""
+            $obj->password ?? "",
+            $obj->role ?? ""
         );
     }
 }

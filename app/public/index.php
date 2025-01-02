@@ -3,6 +3,7 @@
 use Bramus\Router\Router;
 
 // Start the session
+require_once __DIR__ . '/../Models/User.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -13,13 +14,16 @@ $router = new Router();
 $router->setNamespace('\Controllers');
 
 // for admin routes, check if user is authenticated
-$router->before('GET|POST', '/admin/.*', function () {
-    if (!isset($_SESSION['user']) || $_SESSION['user']-> role !== 'admin' || $_SESSION['user']-> role !== 'content') {	
+$router->before('GET|POST', '/admin(.*)', function () {
+    if (str_contains($_SERVER['REQUEST_URI'], '/login') || str_contains($_SERVER['REQUEST_URI'], '/logout')) {
+        return;
+    }
+
+    if (!isset($_SESSION['user']) || $_SESSION['user']->role !== 'admin') {
         header('Location: /login');
         exit();
     }
 });
-
 
 
 // for more info visit: https://github.com/bramus/router
