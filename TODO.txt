@@ -1,4 +1,4 @@
-update layout en style en dat t er weer hip uitziet
+X update layout en style en dat t er weer hip uitziet
 
 privé-inlog -> cameronsmail
 	admin
@@ -11,12 +11,12 @@ privé-inlog -> cameronsmail
 cms -> 	tekst
 	koppen
 
-verhuur 
+X verhuur 
 	kalender
 	fotos
 	update tekst
 
-telefoonvriendelijk
+X telefoonvriendelijk
 
 speltak
 	jaarplanning
@@ -27,7 +27,7 @@ nieuwskopje
 	lopende acties
 	verbouwing
 
-meerinfo
+X meerinfo
 	geschiedenis
 	smoelenboek
 	vertrouwenspersoon
@@ -46,7 +46,7 @@ ledenadmin
 
 ------------------------------------------------------------
 
-
+Exception handling login/register
 
 exception service to catch all exceptions and post to database with timestamp
 	database already created
