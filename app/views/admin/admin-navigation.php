@@ -1,0 +1,9 @@
+<div class="admin-nav">
+    <h2>Admin Menu</h2>
+    <a class="admin-nav" href="/admin">Home</a>
+    <a class="admin-nav" href="/admin/leden">Leden</a>
+    <a class="admin-nav" href="/admin/nieuws">Nieuws</a>
+    <a class="admin-nav" href="/admin/actie">Lopende Acties</a>
+    <a class="admin-nav" href="/admin/speltak">Speltakken</a>
+    <a class="admin-nav" href="/admin/verhuur">Verhuur</a>
+</div>

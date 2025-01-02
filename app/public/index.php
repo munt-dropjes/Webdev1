@@ -13,7 +13,7 @@ $router = new Router();
 $router->setNamespace('\Controllers');
 
 // for admin routes, check if user is authenticated
-$router->before('GET', '/admin/.*', function () {
+$router->before('GET|POST', '/admin/.*', function () {
     if (!isset($_SESSION['user']) || $_SESSION['user']-> role !== 'admin' || $_SESSION['user']-> role !== 'content') {	
         header('Location: /login');
         exit();
@@ -67,6 +67,7 @@ $router->before('GET', '/admin/.*', function () {
 
     //admin
     $router->get('/admin', 'AdminController@index');
+    $router->get('/admin/verhuur', 'AdminController@verhuur');
 
 // Run the router
 $router->run();

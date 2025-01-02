@@ -2,7 +2,7 @@
     require_once "admin-navigation.php";
 ?>
 
-<div class="content">
+<div class="content admin-content">
     <h1>Admin</h1>
     <div class="admin">
         <div class="admin__item">
