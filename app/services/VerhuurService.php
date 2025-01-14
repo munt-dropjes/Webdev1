@@ -21,23 +21,33 @@ class VerhuurService
 
     function addVerhuurData(array $data)
     {
-        $verhuurData = new VerhuurData($data['verhuurWeek'], $data['startDatum'], $data['eindDatum'], $data['beschikbaarheid']);
+        $verhuurData = $this->createVerhuurData($data);
 
         $this->verhuurRepository->addVerhuurData($verhuurData);
     }
 
     function deleteVerhuurData(array $data)
     {
-        $verhuurData = new VerhuurData($data['verhuurWeek'], $data['startDatum'], $data['eindDatum'], $data['beschikbaarheid']);
+        $verhuurData = $this->createVerhuurData($data);
 
         $this->verhuurRepository->deleteVerhuurData($verhuurData);
     }
 
     function updateVerhuurData(array $data)
     {
-        $verhuurData = new VerhuurData($data['verhuurWeek'], $data['startDatum'], $data['eindDatum'], $data['beschikbaarheid']);
+        $verhuurData = $this->createVerhuurData($data);
 
         $this->verhuurRepository->updateVerhuurData($verhuurData);
+    }
+
+    private function createVerhuurData(array $data) : VerhuurData
+    {
+        $verhuurWeek = htmlspecialchars($data['verhuurWeek']);
+        $startDatum = htmlspecialchars($data['startDatum']);
+        $eindDatum = htmlspecialchars($data['eindDatum']);
+        $beschikbaarheid = htmlspecialchars($data['beschikbaarheid']);
+
+        return new VerhuurData($verhuurWeek, $startDatum, $eindDatum, $beschikbaarheid);
     }
 
 }
