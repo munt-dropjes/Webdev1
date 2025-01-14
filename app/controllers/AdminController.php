@@ -21,6 +21,18 @@ class AdminController extends Controller
 
     public function verhuur()
     {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            print_r($_POST);
+
+            if (isset($_POST['add']))
+                $this->verhuurService->addVerhuurData($_POST);
+            else if (isset($_POST['delete']))
+                $this->verhuurService->deleteVerhuurData($_POST);
+            else if (isset($_POST['update']))
+                $this->verhuurService->updateVerhuurData($_POST);
+        }
+        
         $this->view('admin/verhuur', ['verhuurInfo' => $this->verhuurService->getVerhuurInfo()]);
     }
 }

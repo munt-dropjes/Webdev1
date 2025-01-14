@@ -22,7 +22,25 @@ class VerhuurRepository extends BaseRepository
             );
         }
     }
+    
+    function addVerhuurData(VerhuurData $verhuurData)
+    {
+        try {
+            $stmt = $this->connection->prepare('INSERT INTO VerhuurInfo (id, beginDatum, eindDatum, beschikbaar) 
+                                        VALUES (NULL, :beginDatum, :eindDatum, :beschikbaar)');
+            $stmt->bindParam(':beginDatum', $verhuurData->startDatum);
+            $stmt->bindParam(':eindDatum', $verhuurData->eindDatum);
+            $stmt->bindParam(':beschikbaar', $verhuurData->beschikbaarheid);
+            $stmt->execute();
+        } catch (Exception $e) {
+            throw new Exception(
+                "Er is iets fout gegaan met het toevoegen van de verhuur data: " . $e->getMessage()
+            );
+        }
+    }
 
+    
+    
     private function createVerhuurInfo($obj) : VerhuurInfo
     {
         $array = [];

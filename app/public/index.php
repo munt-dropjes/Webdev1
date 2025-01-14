@@ -67,11 +67,11 @@ $router->before('GET|POST', '/admin(.*)', function () {
     $router->get('/login', 'AuthController@login');
     $router->post('/login', 'AuthController@login');
     $router->get('/logout', 'AuthController@logout');
-    $router->get('/account', 'UserController@account');
 
     //admin
     $router->get('/admin', 'AdminController@index');
     $router->get('/admin/verhuur', 'AdminController@verhuur');
+    $router->post('/admin/verhuur', 'AdminController@verhuur');
 
 // Run the router
 $router->run();
