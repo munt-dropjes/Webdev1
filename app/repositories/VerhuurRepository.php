@@ -39,7 +39,19 @@ class VerhuurRepository extends BaseRepository
         }
     }
 
-    
+    function deleteVerhuurData(VerhuurData $verhuurData)
+    {
+        try {
+            $stmt = $this->connection->prepare('DELETE FROM VerhuurInfo WHERE id = :id');
+            $stmt->bindParam(':id', $verhuurData->verhuurWeek);
+            $stmt->execute();
+        } catch (Exception $e) {
+            throw new Exception(
+                "Er is iets fout gegaan met het verwijderen van de verhuur data: " . $e->getMessage()
+            );
+        }
+    }
+
     
     private function createVerhuurInfo($obj) : VerhuurInfo
     {
