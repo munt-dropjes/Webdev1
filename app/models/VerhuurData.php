@@ -16,21 +16,4 @@ class VerhuurData
         $this->eindDatum = $eindDatum;
         $this->beschikbaarheid = $beschikbaarheid;
     }
-
-    function setVerhuurWeek($verhuurWeek)
-    {
-        $this->verhuurWeek = $verhuurWeek;
-    }
-    function setStartDatum($startDatum)
-    {
-        $this->startDatum = $startDatum;
-    }
-    function setEindDatum($eindDatum)
-    {
-        $this->eindDatum = $eindDatum;
-    }
-    function setBeschikbaarheid($beschikbaarheid)
-    {
-        $this->beschikbaarheid = $beschikbaarheid;
-    }
 }

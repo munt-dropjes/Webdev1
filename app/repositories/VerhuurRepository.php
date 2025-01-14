@@ -27,7 +27,8 @@ class VerhuurRepository extends BaseRepository
     {
         try {
             $stmt = $this->connection->prepare('INSERT INTO VerhuurInfo (id, beginDatum, eindDatum, beschikbaar) 
-                                        VALUES (NULL, :beginDatum, :eindDatum, :beschikbaar)');
+                                        VALUES (:id, :beginDatum, :eindDatum, :beschikbaar)');
+            $stmt->bindParam(':id', $verhuurData->verhuurWeek);
             $stmt->bindParam(':beginDatum', $verhuurData->startDatum);
             $stmt->bindParam(':eindDatum', $verhuurData->eindDatum);
             $stmt->bindParam(':beschikbaar', $verhuurData->beschikbaarheid);
