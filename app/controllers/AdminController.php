@@ -23,8 +23,6 @@ class AdminController extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            print_r($_POST);
-
             if (isset($_POST['add']))
                 $this->verhuurService->addVerhuurData($_POST);
             else if (isset($_POST['delete']))

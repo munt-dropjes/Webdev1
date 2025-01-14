@@ -52,6 +52,23 @@ class VerhuurRepository extends BaseRepository
         }
     }
 
+    function updateVerhuurData(VerhuurData $verhuurData)
+    {
+        try {
+            $stmt = $this->connection->prepare('UPDATE VerhuurInfo SET beginDatum = :beginDatum, eindDatum = :eindDatum, beschikbaar = :beschikbaar
+                                        WHERE id = :id');
+            $stmt->bindParam(':beginDatum', $verhuurData->startDatum);
+            $stmt->bindParam(':eindDatum', $verhuurData->eindDatum);
+            $stmt->bindParam(':beschikbaar', $verhuurData->beschikbaarheid);
+            $stmt->bindParam(':id', $verhuurData->verhuurWeek);
+            $stmt->execute();
+        } catch (Exception $e) {
+            throw new Exception(
+                "Er is iets fout gegaan met het updaten van de verhuur data: " . $e->getMessage()
+            );
+        }
+    }
+
     
     private function createVerhuurInfo($obj) : VerhuurInfo
     {

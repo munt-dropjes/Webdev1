@@ -29,15 +29,15 @@ class VerhuurService
     function deleteVerhuurData(array $data)
     {
         $verhuurData = new VerhuurData($data['verhuurWeek'], $data['startDatum'], $data['eindDatum'], $data['beschikbaarheid']);
-        
+
         $this->verhuurRepository->deleteVerhuurData($verhuurData);
     }
 
     function updateVerhuurData(array $data)
     {
-        $verhuurInfo = new VerhuurInfo();
-        $verhuurInfo->setVerhuurInfo($data['verhuurInfo']);
-        $this->verhuurRepository->updateVerhuurInfo($verhuurInfo);
+        $verhuurData = new VerhuurData($data['verhuurWeek'], $data['startDatum'], $data['eindDatum'], $data['beschikbaarheid']);
+
+        $this->verhuurRepository->updateVerhuurData($verhuurData);
     }
 
 }
