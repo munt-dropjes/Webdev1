@@ -4,6 +4,7 @@ namespace Services;
 
 use Repositories\ContactRepository;
 use Models\ContactInfo;
+use Models\ContactData;
 
 class ContactService
 {
@@ -41,13 +42,14 @@ class ContactService
 
     private function createContactData(array $Data) : ContactData
     {
-        $speltak = htmlspecialchars($Info['speltak']);
-        $functie = htmlspecialchars($Info['functie']);
-        $naam = htmlspecialchars($Info['naam']);
-        $email = htmlspecialchars($Info['email']);
-        $telefoonnummer = htmlspecialchars($Info['telefoonnummer']);
+        $id = htmlspecialchars($Data['id']);
+        $speltak = htmlspecialchars($Data['speltak']);
+        $functie = htmlspecialchars($Data['functie']);
+        $naam = htmlspecialchars($Data['naam']);
+        $email = htmlspecialchars($Data['email']);
+        $telefoonnummer = htmlspecialchars($Data['telefoonnummer']);
 
-        return new ContactData($speltak, $functie, $naam, $email, $telefoonnummer);
+        return new ContactData($id, $speltak, $functie, $naam, $email, $telefoonnummer);
     }
 
 }

@@ -72,6 +72,8 @@ $router->before('GET|POST', '/admin(.*)', function () {
     $router->get('/admin', 'AdminController@index');
     $router->get('/admin/verhuur', 'AdminController@verhuur');
     $router->post('/admin/verhuur', 'AdminController@verhuur');
+    $router->get('/admin/contact', 'AdminController@contact');
+    $router->post('/admin/contact', 'AdminController@contact');
 
 // Run the router
 $router->run();

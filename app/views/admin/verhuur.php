@@ -15,8 +15,10 @@
         <?php foreach ($verhuurInfo->verhuurData as $verhuurData) : ?>
             <tr class="verhuur">
                 <form method="post">
-                    <input type="hidden" name="verhuurWeek" value="<?=$verhuurData->verhuurWeek?>">
-                    <td class="verhuur"> <?=$verhuurData->verhuurWeek?> </td>
+                    <td class="verhuur">
+                        <input type="hidden" name="verhuurWeek" value="<?=$verhuurData->verhuurWeek?>">
+                        <?=$verhuurData->verhuurWeek?> 
+                    </td>
                     <td class="verhuur"> 
                         <input type="text" name="startDatum" value="<?=$verhuurData->startDatum?>">
                     </td>
