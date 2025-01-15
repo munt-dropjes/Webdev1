@@ -1,8 +1,8 @@
 X update layout en style en dat t er weer hip uitziet
 
-privé-inlog -> cameronsmail
-	admin
-	content
+privé-inlog? -> cameronsmail
+X	admin
+X	content
 	ledenadmin
 	jeugdlid
 		verkenners
@@ -28,6 +28,7 @@ nieuwskopje
 	verbouwing
 
 X meerinfo
+	cadugraaf
 	geschiedenis
 	smoelenboek
 	vertrouwenspersoon
@@ -40,13 +41,13 @@ aanmeldingen -> vrienden van
 		welpen
 		verkennners
 
-socials
+X socials
 
 ledenadmin
 
 ------------------------------------------------------------
 
-Exception handling login/register
+Exception handling login/register, everywhere
 
 exception service to catch all exceptions and post to database with timestamp
 	database already created

@@ -6,6 +6,12 @@ use Services\GroepService;
 
 class GroepController extends Controller
 {
+    private GroepService $groepService;
+    function __construct()
+    {
+        $this->groepService = new GroepService();
+    }
+
     function index() : void
     {
         $this->view('groep/index');
