@@ -19,7 +19,7 @@ class GroepController extends Controller
 
     function geschiedenis() : void
     {
-        $this->view('groep/geschiedenis');
+        $this->view('groep/geschiedenis/index');
     }
 
     function cadugraaf() : void

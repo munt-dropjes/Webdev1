@@ -36,7 +36,6 @@ class ContactRepository extends BaseRepository
             $stmt->bindParam(':naam', $contactData->naam);
             $stmt->bindParam(':email', $contactData->email);
             $stmt->bindParam(':telefoonnummer', $contactData->telefoonnummer);
-
             $stmt->execute();
         } catch (Exception $e) {
             throw new Exception(
@@ -72,7 +71,6 @@ class ContactRepository extends BaseRepository
             $stmt->bindParam(':email', $contactData->email);
             $stmt->bindParam(':telefoonnummer', $contactData->telefoonnummer);
             $stmt->bindParam(':id', $contactData->id);
-
             $stmt->execute();
         } catch (Exception $e) {
             throw new Exception(
