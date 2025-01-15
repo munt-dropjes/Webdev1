@@ -4,6 +4,7 @@ namespace Controllers;
 
 use Services\VerhuurService;
 use Services\ContactService;
+use Services\GroepService;
 
 class AdminController extends Controller
 {
@@ -11,10 +12,7 @@ class AdminController extends Controller
 
     private $verhuurService;
     private $contactService;
-    function __construct()
-    {
-                
-    }
+    private $groepService;
     
     public function index()
     {
@@ -39,12 +37,12 @@ class AdminController extends Controller
     }
 
     public function contact()
-    {
-        print_r($_POST);
-        
+    {        
         $this->contactService = new ContactService();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            print_r($_POST);
 
             if (isset($_POST['add']))
                 $this->contactService->addContactData($_POST);
@@ -55,5 +53,27 @@ class AdminController extends Controller
         }
         
         $this->view('admin/contact', ['contactInfo' => $this->contactService->getContactInfo()]);
+    }
+
+    public function documenten()
+    {
+        $this->groepService = new GroepService();
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            if (isset($_POST['add']))
+                $this->groepService->addDocument($_POST);
+            else if (isset($_POST['delete']))
+                $this->groepService->deleteDocument($_POST);
+            else if (isset($_POST['update']))
+                $this->groepService->updateDocument($_POST);
+        }
+
+        $this->view('admin/documenten', [
+    //        'cadugraaf' => $this->groepService->getCadugraaf(),
+            'smoelenboek' => $this->groepService->getSmoelenboek(),
+            'vertrouwenspersoon' => $this->groepService->getVertrouwenspersoon(),
+            'privacy' => $this->groepService->getPrivacy()
+        ]);
     }
 }

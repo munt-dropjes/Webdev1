@@ -132,9 +132,6 @@
                     <a href="/contact">Contact</a>
                 </li>
                 <?php if(isset($_SESSION['user'])): ?>
-                        <li>">
-                            <a href="/admin">Admin</a>
-                        </li>
                         <li>
                             <a href="/logout">Uitloggen</a>
                         </li>

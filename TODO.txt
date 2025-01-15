@@ -47,6 +47,13 @@ ledenadmin
 ------------------------------------------------------------
 
 Exception handling login/register
+	<?php
+		if (isset($error)) {
+			echo "<p class='error'>$error</p>";
+		}
+	?>
 
 exception service to catch all exceptions and post to database with timestamp
 	database already created
+
+set update contact/new contact to speltakInfo

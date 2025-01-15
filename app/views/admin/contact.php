@@ -29,7 +29,6 @@
                             <option value="Leiding" <?php if($contactData->speltak == "Leiding")echo'selected';?>>Leiding</option>
                             <option value="Staf" <?php if($contactData->speltak == "Staf")echo'selected';?>>Staf</option>
                             <option value="Stam" <?php if($contactData->speltak == "Stam")echo'selected';?>>Stam</option>
-                            <option value="Admin" hidden <?php if($contactData->speltak == "Admin")echo'selected';?>>Admin</option>
                         </select>
                     </td>
                     <td class="verhuur"> 
@@ -54,7 +53,7 @@
                     $lastId = end($contactInfo->contactData)->id;
                     $lastId =+ 1;
                 ?>
-                <input type="hidden" name="id" value="$lastId">
+                <input type="hidden" name="id" value="<?=$lastId?>">
                 <td class="verhuur"> 
                     <input type="text" name="naam">
                 </td>

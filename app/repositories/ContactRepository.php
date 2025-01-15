@@ -63,7 +63,8 @@ class ContactRepository extends BaseRepository
         try {
             $speltakId = $this->findSpeltakId($contactData);
 
-            $stmt = $this->connection->prepare("UPDATE ContactInfo SET speltakId = :speltakId, functie = :functie, naam = :naam, email = :email, telefoonnummer = :telefoonnummer
+            $stmt = $this->connection->prepare("UPDATE ContactInfo 
+                                        SET speltakId = :speltakId, functie = :functie, naam = :naam, email = :email, telefoonnummer = :telefoonnummer
                                         WHERE id = :id");
             $stmt->bindParam(':speltakId', $speltakId);
             $stmt->bindParam(':functie', $contactData->functie);

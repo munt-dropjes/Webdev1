@@ -13,7 +13,7 @@ class SpeltakkenRepository extends BaseRepository
             $stmt = $this->connection->prepare('SELECT s.naam, c.email, c.telefoonnummer, i.leeftijd, i.tijden, i.tekst
                                         FROM SpeltakInfo AS i
                                         JOIN Speltak AS s ON s.id = i.speltakId
-                                        LEFT OUTER JOIN ContactInfo AS c ON c.id = i.contactId	
+                                        LEFT OUTER JOIN ContactInfo AS c ON c.id = s.contactId	
                                         WHERE s.naam = ?');
             $stmt->execute([$speltak]);
             $obj = $stmt->fetch(PDO::FETCH_OBJ);

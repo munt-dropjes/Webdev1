@@ -31,3 +31,13 @@ a:hover.admin-nav {
     background-color: green;
 }
 
+div.documenten {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.document {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40%;
+}
