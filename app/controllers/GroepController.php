@@ -6,6 +6,12 @@ use Services\GroepService;
 
 class GroepController extends Controller
 {
+    private $groepService;
+    function __construct()
+    {
+        $this->groepService = new GroepService();
+    }
+
     function index() : void
     {
         $this->view('groep/index');
@@ -23,17 +29,17 @@ class GroepController extends Controller
 
     function smoelenboek() : void
     {
-        $this->view('groep/smoelenboek', ['smoelenboek' => $this->groepService->getSmoelenboek()]);
+        $this->view('groep/document', ['document' => $this->groepService->getSmoelenboek()]);
     }
 
     function vertrouwenspersoon() : void
     {
-        $this->view('groep/vertrouwenspersoon', ['vertrouwenspersoon' => $this->groepService->getVertrouwenspersoon()]);
+        $this->view('groep/document', ['document' => $this->groepService->getVertrouwenspersoon()]);
     }
 
     function privacy() : void
     {
-        $this->view('groep/privacy', ['privacy' => $this->groepService->getPrivacy()]);
+        $this->view('groep/document', ['document' => $this->groepService->getPrivacy()]);
     }
 
     function aanmelding() : void
