@@ -6,6 +6,7 @@ use Services\ExceptionService;
 use Services\VerhuurService;
 use Services\ContactService;
 use Services\GroepService;
+use Services\DocumentService;
 
 class AdminController extends Controller
 {
@@ -15,6 +16,7 @@ class AdminController extends Controller
     private $contactService;
     private $groepService;
     private $exceptionService;
+    private $documentService;
 
     public function __construct()
     {
@@ -22,6 +24,7 @@ class AdminController extends Controller
         $this->verhuurService = new VerhuurService();
         $this->contactService = new ContactService();
         $this->groepService = new GroepService();
+        $this->documentService = new DocumentService();
     }
     
     public function index()
@@ -73,11 +76,11 @@ class AdminController extends Controller
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     if (isset($_POST['add']))
-                    $this->groepService->addDocument($_POST);
+                    $this->documentService->addDocument($_POST);
                     else if (isset($_POST['delete']))
-                    $this->groepService->deleteDocument($_POST);
+                    $this->documentService->deleteDocument($_POST);
                     else if (isset($_POST['update']))
-                    $this->groepService->updateDocument($_POST);
+                    $this->documentService->updateDocument($_POST);
             }
 
             $this->view('admin/documenten', [
@@ -97,11 +100,11 @@ class AdminController extends Controller
         try {
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (isset($_POST['add']))
-                    $this->groepService->addDocument($_POST);
+                    $this->documentService->addDocument($_POST);
                 else if (isset($_POST['delete']))
-                    $this->groepService->deleteDocument($_POST);
+                    $this->documentService->deleteDocument($_POST);
                 else if (isset($_POST['update']))
-                    $this->groepService->updateDocument($_POST);
+                    $this->documentService->updateDocument($_POST);
             }
 
             $this->view('admin/speltak', ['speltak' => $this->groepService->getSpeltak()]);
