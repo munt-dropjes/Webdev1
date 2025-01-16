@@ -1,5 +1,11 @@
 <div class="content">
-
+    <?php 
+        if(isset($error)) {?>
+            <div class="error-label">
+                <?= $error ?>
+            </div>
+        <?}
+    ?>
     <h1>
         <?=$document->type?>
     </h1>

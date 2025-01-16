@@ -2,6 +2,13 @@
     <div class="row">
         <div class="col">
             <h2>Registeren</h2>
+            <?php 
+                if(isset($error)) {?>
+                    <div class="error-label">
+                        <?= $error ?>
+                    </div>
+                <?}
+            ?>
             <form action="register" method="POST">
                 <div class="mb-1">
                     <label for="name" class="form-label">Naam</label>

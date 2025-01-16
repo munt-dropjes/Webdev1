@@ -4,6 +4,13 @@
 
 ?>
 <div class="content">
+    <?php 
+        if(isset($error)) {?>
+            <div class="error-label">
+                <?= $error ?>
+            </div>
+        <?}
+    ?>
     <h1><?=$speltakInfo->naam?></h1>
     <div>
         <?php if ($speltakInfo->naam != "Stam") : ?>

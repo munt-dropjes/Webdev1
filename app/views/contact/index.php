@@ -21,6 +21,13 @@
                     <td class="verhuur"><a href="mailto:<?=$contactData->email?>"><?=$contactData->email?></a> </td>
                 </tr>
             <?php endforeach; ?>
+            <?php 
+            if(isset($error)) {?>
+                <div class="error-label">
+                    <?= $error ?>
+                </div>
+            <?}
+        ?>
         </table>
     </div>
 </div>

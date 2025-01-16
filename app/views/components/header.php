@@ -45,8 +45,8 @@
         <nav class="navigation">
             <ul class="navigation">
                 <div class="navLeft">
-                    <li class="navigation <?php active('home');?>">
-                        <a class="navigation <?php active('home');?>" href="/home">Home</a>
+                    <li class="navigation <?php active('home');active('');active('/');?>">
+                        <a class="navigation <?php active('home');active('');active('/');?>" href="/home">Home</a>
                     </li>
                     <li class="navigation dropdown <?php active('groep');active('geschiedenis');active('cadugraaf');active('smoelenboek');active('vertrouwenspersoon');active('privacy');active('aanmelding');?>">
                         <a href="/groep" class="navigation dropbtn <?php active('groep');active('geschiedenis');active('cadugraaf');active('smoelenboek');active('vertrouwenspersoon');active('privacy');active('aanmelding');?>">De Groep</a>

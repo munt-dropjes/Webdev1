@@ -4,6 +4,13 @@
 
 <div class="content admin-content">
     <h1>Documenten</h1>
+    <?php 
+        if(isset($error)) {?>
+            <div class="error-label">
+                <?= $error ?>
+            </div>
+        <?}
+    ?>
     <div class="documenten">
         <div class="document">
             <h3>Smoelenboek</h3>

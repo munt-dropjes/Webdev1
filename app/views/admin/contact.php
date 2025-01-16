@@ -4,6 +4,13 @@
 
 <div class="content admin-content">
     <h1>Contact</h1>
+    <?php 
+        if(isset($error)) {?>
+            <div class="error-label">
+                <?= $error ?>
+            </div>
+        <?}
+    ?>
     <table class="verhuur">
         <tr class="verhuur">
             <th class="verhuur">Naam</th>

@@ -40,6 +40,13 @@
                     ?> </td>
                 </tr>
             <?php endforeach; ?>
+            <?php 
+                if(isset($error)) {?>
+                    <div class="error-label">
+                        <?= $error ?>
+                    </div>
+                <?}
+            ?>
         </table>
     </div>
 </div>
