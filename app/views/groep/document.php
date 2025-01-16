@@ -16,7 +16,7 @@
         </h2>
     <?php endif; ?>
 
-    <object data="data:application/pdf;base64,<?=$document->getDocument()?>" type="application/pdf" style="width: 100%; height: 1000px;" name="test"></object>
+    <object data="<?=$document->document?>" type="application/pdf" style="width: 100%; height: 1000px;"></object>
 
 
     <?php if ($document->editie != null) : ?>

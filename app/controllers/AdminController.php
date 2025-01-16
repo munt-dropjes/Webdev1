@@ -77,7 +77,7 @@ class AdminController extends Controller
                     else if (isset($_POST['delete']))
                     $this->groepService->deleteDocument($_POST);
                     else if (isset($_POST['update']))
-                    $this->groepService->updateDocument($_POST)
+                    $this->groepService->updateDocument($_POST);
             }
 
             $this->view('admin/documenten', [
@@ -88,7 +88,26 @@ class AdminController extends Controller
             ]);
         } catch (\Exception $e) {
             $this->exceptionService->logException($e);
-            $this->view('admin/documenten', ['error' => $e->getMessage()])
+            $this->view('admin/documenten', ['error' => $e->getMessage()]);
+        }
+    }
+
+    public function speltak()
+    {
+        try {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                if (isset($_POST['add']))
+                    $this->groepService->addDocument($_POST);
+                else if (isset($_POST['delete']))
+                    $this->groepService->deleteDocument($_POST);
+                else if (isset($_POST['update']))
+                    $this->groepService->updateDocument($_POST);
+            }
+
+            $this->view('admin/speltak', ['speltak' => $this->groepService->getSpeltak()]);
+        } catch (\Exception $e) {
+            $this->exceptionService->logException($e);
+            $this->view('admin/speltak', ['error' => $e->getMessage()]);
         }
     }
 }

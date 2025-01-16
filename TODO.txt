@@ -1,18 +1,20 @@
 X update layout en style en dat t er weer hip uitziet
 
 privé-inlog -> cameronsmail
-	admin
-	content
+X	admin
+X	content
 	ledenadmin
 	jeugdlid
 		verkenners
 		welpen
 
-cms -> 	tekst
+cms ->
+	tekst
 	koppen
+	//see Models\...Info
 
 X verhuur 
-	kalender
+X	kalender
 	fotos
 	update tekst
 
@@ -40,20 +42,10 @@ aanmeldingen -> vrienden van
 		welpen
 		verkennners
 
-socials
+Xsocials
 
 ledenadmin
 
 ------------------------------------------------------------
-
-Exception handling login/register
-	<?php
-		if (isset($error)) {
-			echo "<p class='error'>$error</p>";
-		}
-	?>
-
-exception service to catch all exceptions and post to database with timestamp
-	database already created
 
 set update contact/new contact to speltakInfo
