@@ -9,11 +9,13 @@ class ExceptionRepository extends BaseRepository
     function logException(Exception $exception)
     {
         try {
-            $stmt = $this->connection->prepare('INSERT INTO ErrorLog (code, message, stackTrace) 
-                                        VALUES (:code, :message, :stackTrace)');
-            $stmt->bindParam(':code', $exception->getCode());
-            $stmt->bindParam(':message', $exception->getMessage());
-            $stmt->bindParam(':stackTrace', $exception->getTraceAsString());
+            $errorMessage = $exception->getMessage();
+            $errorCode = $exception->getCode();
+
+            $stmt = $this->connection->prepare('INSERT INTO ErrorLog (code, message) 
+                                        VALUES (:code, :message)');
+            $stmt->bindParam(':code', $errorCode);
+            $stmt->bindParam(':message', $errorMessage);
             $stmt->execute();
         } catch (Exception $e) {
             throw new Exception(

@@ -2,15 +2,18 @@
 
 namespace Controllers;
 
+use Services\ExceptionService;
 use Services\AuthService;
 
 class AuthController extends Controller
 {
     private AuthService $authService;
+    private ExceptionService $exceptionService;
 
     public function __construct()
     {
         $this->authService = new AuthService();
+        $this->exceptionService = new ExceptionService();
     }
 
     function register() : void
@@ -20,8 +23,8 @@ class AuthController extends Controller
                 if($this->authService->executeRegisterForm($_POST)) {
                     header('Location: /');
                 }
-            } catch (Exception $e) {
-                echo $e->getMessage(); //TODO: goes to exception service
+            } catch (\Exception $e) {
+                $this->exceptionService->logException($e);
                 $this->view('authentication/register', ['error' => $e->getMessage()]);
             }
         }
@@ -37,8 +40,8 @@ class AuthController extends Controller
                 if($this->authService->executeLoginForm($_POST['email'], $_POST['password'])) {
                     header('Location: /');
                 }
-            } catch (Exception $e) {
-                echo $e->getMessage(); //TODO: goes to exception service
+            } catch (\Exception $e) {
+                $this->exceptionService->logException($e);
                 $this->view('authentication/login', ['error' => $e->getMessage()]);
             }
         }
