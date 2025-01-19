@@ -21,9 +21,9 @@ X	kalender
 X telefoonvriendelijk
 
 speltak
-	jaarplanning
+X	jaarplanning
 	fotodatabase
-	verkennerboekjes
+X	verkennerboekjes
 
 nieuwskopje
 	lopende acties
@@ -47,5 +47,3 @@ Xsocials
 ledenadmin
 
 ------------------------------------------------------------
-
-set update contact/new contact to speltakInfo

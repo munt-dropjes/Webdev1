@@ -97,7 +97,7 @@
     <div class="header-mobile">
         <section class="hamburger-navbar">
             <a id="headerImage" href="/home">
-                <img id="logo" width="20%" src="../img/logo.png" alt="Afbeelding is niet zichtbaar">
+                <img id="logo" width="20%" src="../img/header/logo.png" alt="Afbeelding is niet zichtbaar">
             </a>    
             <input id="menu-toggle" type="checkbox"/>
             <label class="menu-button-container" for="menu-toggle">

@@ -21,9 +21,9 @@ Hi, just a small project made for web development 1.
 
 | Role           | Username (Placeholder) | Password (Placeholder) |
 |----------------|------------------------|------------------------|
-| Administrator  | `admin@gmail.com`      | `admin`                |
-| Employee       | `employee@gmail.com`   | `employee`             |  
-| Visitor (Demo) | `visitor@gmail.com`    | `visitor`              |
+| Administrator  | `admin@admin.com`      | `daniel`               |
+| ContentManager | `content@content.com`  | `daniel`               |  
+| User           | `user@user.com`        | `daniel`               |
 
 ### **Importing the SQL Script (If necessary):**
 
