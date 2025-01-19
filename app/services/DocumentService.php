@@ -43,8 +43,6 @@ class DocumentService
             $uploadOk = 1;
             $documentFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
             
-            // Check if image file is a actual image or fake image
-            
             // Check file size
             if ($_FILES["document"]["size"] > 500000) {
                 $uploadOk = 0;

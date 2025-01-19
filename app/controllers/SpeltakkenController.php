@@ -94,7 +94,7 @@ class SpeltakkenController extends Controller
         try {
             $speltakNaam = $this->getSpeltakNaam();
 
-            $this->view('speltakken/boekjes', ['boekjes' => $this->speltakkenService->getBoekjes($speltakNaam)]);
+            $this->view('speltakken/boekjes', ['boekjes' => $this->speltakkenService->getBoekjes()]);
         } catch (\Exception $e) {
             $this->exceptionService->logException($e);
             $this->view('speltakken/boekjes', ['error' => $e->getMessage()]);

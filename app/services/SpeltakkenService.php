@@ -3,14 +3,18 @@
 namespace Services;
 
 use Repositories\SpeltakkenRepository;
+use Repositories\DocumentRepository;
 use Models\Speltak;
+use Models\Document;
 
 class SpeltakkenService
 {
     private $speltakkenRepository;
+    private $documentenRepository;
     function __construct()
     {
         $this->speltakkenRepository = new SpeltakkenRepository();
+        $this->documentenRepository = new DocumentRepository();
     }
 
     function getSpeltakInfo($speltak) : Speltak
@@ -18,19 +22,19 @@ class SpeltakkenService
         return $this->speltakkenRepository->getSpeltakInfo($speltak);
     }
 
-    function getProgramma($speltak) : array
+    function getProgramma($speltak) : Document
     {
-        return $this->speltakkenRepository->getProgramma($speltak);
+        return $this->documentenRepository->getDocument('LTP', $speltak);
     }
 
-    function getFoto($speltak) : array
+    function getManyProgrammas() : array
     {
-        return $this->speltakkenRepository->getFoto($speltak);
+        return $this->documentenRepository->getManyDocuments('LTP');
     }
 
-    function getBoekjes($speltak) : array
+    function getBoekjes() : array
     {
-        return $this->speltakkenRepository->getBoekjes($speltak);
+        return $this->documentenRepository->getManyDocuments('Boekje');	
     }
 
 }

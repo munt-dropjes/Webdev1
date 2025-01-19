@@ -1,6 +1,7 @@
 <?php
-
-    include_once "speltak-navigation.php";
+    if ($speltakInfo->naam == "Verkenners") :
+        include_once "speltak-navigation.php";
+    endif;
 
 ?>
 <div class="content">

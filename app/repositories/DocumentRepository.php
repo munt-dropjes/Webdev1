@@ -27,7 +27,7 @@ class DocumentRepository extends BaseRepository
         }
     }
 
-    function getManyDocuments($documentType, $speltak) : array
+    function getManyDocuments($documentType) : array
     {
         try {
             $stmt = $this->connection->prepare('SELECT d.id, dt.type, d.titel, d.document, d.editie, s.naam AS speltak
@@ -36,7 +36,6 @@ class DocumentRepository extends BaseRepository
                                                 LEFT JOIN Speltak AS s ON d.speltakId = s.id
                                                 WHERE dt.type = :documentType');
             $stmt->bindParam(':documentType', $documentType);
-            // $stmt->bindParam(':speltak', $speltak);
             $stmt->execute();
             $obj = $stmt->fetchAll(PDO::FETCH_OBJ);
             return $this->createManyDocuments($obj);

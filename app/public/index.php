@@ -76,6 +76,8 @@ $router->before('GET|POST', '/admin(.*)', function () {
     $router->post('/admin/contact', 'AdminController@contact');
     $router->get('/admin/documenten', 'AdminController@documenten');
     $router->post('/admin/documenten', 'AdminController@documenten');
+    $router->get('/admin/speltak', 'AdminController@speltak');
+    $router->post('/admin/speltak', 'AdminController@speltak');
 
 // Run the router
 $router->run();

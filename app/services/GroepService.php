@@ -15,7 +15,7 @@ class GroepService
 
     function getCadugraaf() : array
     {
-        return $this->documentRepository->getManyDocuments("Cadugraaf", null);
+        return $this->documentRepository->getManyDocuments("Cadugraaf");
     }
 
     function getSmoelenboek() : Document

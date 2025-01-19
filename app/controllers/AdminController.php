@@ -7,6 +7,7 @@ use Services\VerhuurService;
 use Services\ContactService;
 use Services\GroepService;
 use Services\DocumentService;
+use Services\SpeltakkenService;
 
 class AdminController extends Controller
 {
@@ -15,6 +16,7 @@ class AdminController extends Controller
     private $verhuurService;
     private $contactService;
     private $groepService;
+    private $speltakService;
     private $exceptionService;
     private $documentService;
 
@@ -25,6 +27,7 @@ class AdminController extends Controller
         $this->contactService = new ContactService();
         $this->groepService = new GroepService();
         $this->documentService = new DocumentService();
+        $this->speltakService = new SpeltakkenService();
     }
     
     public function index()
@@ -108,7 +111,10 @@ class AdminController extends Controller
                     $this->documentService->updateDocument($_POST);
             }
 
-            $this->view('admin/speltak', ['speltak' => $this->groepService->getSpeltak()]);
+            $this->view('admin/speltak', [
+                'programma' => $this->speltakService->getManyProgrammas(),
+                'boekjes' => $this->speltakService->getBoekjes()
+            ]);
         } catch (\Exception $e) {
             $this->exceptionService->logException($e);
             $this->view('admin/speltak', ['error' => $e->getMessage()]);
