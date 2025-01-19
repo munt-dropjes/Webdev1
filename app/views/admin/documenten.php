@@ -56,10 +56,27 @@
                 <input type="text" name="titel" value="<?= $privacy->titel ?>">
                 <label for="editie">Editie</label>
                 <input type="text" name="editie" value="<?= $privacy->editie ?>">
-                <input type="hidden" name="speltak" value="<?= $smoelenboek->speltak ?>">
+                <input type="hidden" name="speltak" value="<?= $privacy->speltak ?>">
                 <input type="file" name="document" accept=".pdf" required>
-                <button type="submit" name="<?= $smoelenboek->document ? 'update' : 'add' ?>">
+                <button type="submit" name="<?= $privacy->document ? 'update' : 'add' ?>">
                     <?= $vertrouwenspersoon->document ? 'Update' : 'Voeg Toe' ?>
+                </button>
+            </form>
+        </div>
+        <div class="document">
+            <h3>Aanmeldingsprocedure</h3>
+            <a href="<?=$aanmelding->document?>" target="_blank">Bekijk huidig document</a>
+            <form method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?= $aanmelding->id ?>">
+                <input type="hidden" name="type" value="Aanmeldingsprocedure">
+                <label for="titel">Titel</label>
+                <input type="text" name="titel" value="<?= $aanmelding->titel ?>">
+                <label for="editie">Editie</label>
+                <input type="text" name="editie" value="<?= $aanmelding->editie ?>">
+                <input type="hidden" name="speltak" value="<?= $aanmelding->speltak ?>">
+                <input type="file" name="document" accept=".pdf" required>
+                <button type="submit" name="<?= $aanmelding->document ? 'update' : 'add' ?>">
+                    <?= $aanmelding->document ? 'Update' : 'Voeg Toe' ?>
                 </button>
             </form>
         </div>
@@ -95,6 +112,7 @@
                     <input type="hidden" name="speltak" value="<?= $versie->speltak ?>">
                     <input type="file" name="document" accept=".pdf" required>
                     <button type="submit" name="update">Update</button>
+                    <button type="submit" name="delete">Verwijder</button>
                 </form>
             </div>
         <?php };   

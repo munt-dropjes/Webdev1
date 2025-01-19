@@ -30,11 +30,11 @@ nieuwskopje
 	verbouwing
 
 X meerinfo
-	geschiedenis
-	smoelenboek
-	vertrouwenspersoon
-	privacyverklaring/AVG
-	aanmeldingsprocedure
+X	geschiedenis
+X	smoelenboek
+X	vertrouwenspersoon
+X	privacyverklaring/AVG
+X	aanmeldingsprocedure
 
 bijhouden -> speltak, nieuws
 

@@ -39,7 +39,6 @@ class DocumentRepository extends BaseRepository
             // $stmt->bindParam(':speltak', $speltak);
             $stmt->execute();
             $obj = $stmt->fetchAll(PDO::FETCH_OBJ);
-            print_r($obj);
             return $this->createManyDocuments($obj);
         } catch (Exception $e) {
             throw new Exception(

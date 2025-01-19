@@ -67,6 +67,11 @@ class GroepController extends Controller
 
     function aanmelding() : void
     {
-        $this->view('groep/aanmelding');
+        try {
+            $this->view('groep/document', ['document' => $this->groepService->getAanmelding()]);
+        } catch (\Exception $e) {
+            $this->exceptionService->logException($e);
+            $this->view('groep/document', ['error' => $e->getMessage()]);
+        }
     }
 }

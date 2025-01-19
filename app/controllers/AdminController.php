@@ -87,7 +87,8 @@ class AdminController extends Controller
                 'cadugraaf' => $this->groepService->getCadugraaf(),
                 'smoelenboek' => $this->groepService->getSmoelenboek(),
                 'vertrouwenspersoon' => $this->groepService->getVertrouwenspersoon(),
-                'privacy' => $this->groepService->getPrivacy()
+                'privacy' => $this->groepService->getPrivacy(),
+                'aanmelding' => $this->groepService->getAanmelding()
             ]);
         } catch (\Exception $e) {
             $this->exceptionService->logException($e);

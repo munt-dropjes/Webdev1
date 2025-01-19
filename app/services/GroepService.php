@@ -32,4 +32,9 @@ class GroepService
     {
         return $this->documentRepository->getDocument("Privacyverklaring", null);
     }
+
+    function getAanmelding() : Document
+    {
+        return $this->documentRepository->getDocument("Aanmeldingsprocedure", null);
+    }
 }
