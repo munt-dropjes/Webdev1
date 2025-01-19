@@ -34,11 +34,12 @@ class DocumentRepository extends BaseRepository
                                                 FROM Documenten AS d
                                                 JOIN DocumentType AS dt ON d.typeId = dt.id
                                                 LEFT JOIN Speltak AS s ON d.speltakId = s.id
-                                                WHERE dt.type = :documentType AND s.naam = :speltak');
+                                                WHERE dt.type = :documentType');
             $stmt->bindParam(':documentType', $documentType);
-            $stmt->bindParam(':speltak', $speltak);
+            // $stmt->bindParam(':speltak', $speltak);
             $stmt->execute();
             $obj = $stmt->fetchAll(PDO::FETCH_OBJ);
+            print_r($obj);
             return $this->createManyDocuments($obj);
         } catch (Exception $e) {
             throw new Exception(

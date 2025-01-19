@@ -84,7 +84,7 @@ class AdminController extends Controller
             }
 
             $this->view('admin/documenten', [
-        //        'cadugraaf' => $this->groepService->getCadugraaf(),
+                'cadugraaf' => $this->groepService->getCadugraaf(),
                 'smoelenboek' => $this->groepService->getSmoelenboek(),
                 'vertrouwenspersoon' => $this->groepService->getVertrouwenspersoon(),
                 'privacy' => $this->groepService->getPrivacy()
