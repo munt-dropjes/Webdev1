@@ -78,6 +78,7 @@ $router->before('GET|POST', '/admin(.*)', function () {
     $router->post('/admin/documenten', 'AdminController@documenten');
     $router->get('/admin/speltak', 'AdminController@speltak');
     $router->post('/admin/speltak', 'AdminController@speltak');
+    $router->get('/admin/users', 'AdminController@users');
 
     //api
     $router->get('/api/users', 'ApiController@getAll');

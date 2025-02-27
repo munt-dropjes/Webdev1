@@ -120,4 +120,9 @@ class AdminController extends Controller
             $this->view('admin/speltak', ['error' => $e->getMessage()]);
         }
     }
+
+    public function users()
+    {
+        $this->view('admin/users');
+    }
 }
