@@ -79,5 +79,12 @@ $router->before('GET|POST', '/admin(.*)', function () {
     $router->get('/admin/speltak', 'AdminController@speltak');
     $router->post('/admin/speltak', 'AdminController@speltak');
 
+    //api
+    $router->get('/api/users', 'ApiController@getAll');
+    $router->get('/api/users/(\d+)', 'ApiController@getOne');
+    $router->post('/api/users', 'ApiController@create');
+    $router->put('/api/users/(\d+)', 'ApiController@update');
+    $router->delete('/api/users/(\d+)', 'ApiController@delete');
+
 // Run the router
 $router->run();

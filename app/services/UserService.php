@@ -19,8 +19,28 @@ class UserService
         return $this->userRepository->fetchOneByEmail($email);
     }
 
-    public function create($user) : void
+    public function create($user) : User
     {
-        $this->userRepository->create($user);
+        return $this->userRepository->create($user);
+    }
+
+    public function fetchOneById($id) : User
+    {
+        return $this->userRepository->fetchOneById($id);
+    }
+
+    public function update($user, $id) : User
+    {
+        return $this->userRepository->update($user, $id);
+    }
+
+    public function delete($id) : void
+    {
+        $this->userRepository->delete($id);
+    }
+
+    public function fetchAll() : array
+    {
+        return $this->userRepository->fetchAll();
     }
 }
