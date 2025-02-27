@@ -99,10 +99,10 @@ class UserRepository extends BaseRepository
     }
 
 
-    private function createUserFromObject($obj): User
+    private function createUserFromObject($obj): User|null
     {
-        if (!$obj) {
-            return new User();
+        if ($obj == null) {
+            return null;
         }
         return new User(
             $obj->id ?? 0,

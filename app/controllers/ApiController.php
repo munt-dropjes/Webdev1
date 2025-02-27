@@ -65,6 +65,11 @@ class ApiController extends Controller
 
     public function delete($id){
         try{
+            if ($this->userService->fetchOneById($id) == null) {
+                $this->respondWithError(404, 'User not found');
+                return;
+            }
+
             $this->userService->delete($id);
             $this->respond("Succesfully deleted");
         } catch (\Exception $e){

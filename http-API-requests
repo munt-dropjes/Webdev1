@@ -1,0 +1,537 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v10.3.1"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-02-27T14:50:56.625Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.3.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "New Request"
+			},
+			{
+				"startedDateTime": "2025-02-27T14:50:56.625Z",
+				"time": 112.72999999999999,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost/api/users/12",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "PHPSESSID",
+							"value": "5e8eabefd9873a36d367d8ac3139212f",
+							"path": "/",
+							"domain": "localhost"
+						}
+					],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.3.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Server",
+							"value": "nginx/1.27.1"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 27 Feb 2025 14:45:26 GMT"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "X-Powered-By",
+							"value": "PHP/8.3.11"
+						},
+						{
+							"name": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"content": {
+						"size": 21,
+						"mimeType": "application/json; charset=UTF-8",
+						"text": "\"Succesfully deleted\""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 112.72999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "New Request"
+			},
+			{
+				"startedDateTime": "2025-02-27T14:50:56.625Z",
+				"time": 54.605000000000004,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost/api/users/5",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "PHPSESSID",
+							"value": "5e8eabefd9873a36d367d8ac3139212f",
+							"path": "/",
+							"domain": "localhost"
+						}
+					],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.3.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"id\": \"5\",\n\t\"name\": \"Daniel \",\n\t\"email\": \"je@moeder.nl\",\n\t\"password\": \"$2y$10$EkEYgS9xEPHuK7RNEVoQr.0VC0CXsrx\\/e.9NK9Oyi9G6pQ8IdyqnO\",\n\t\"role\": \"admin\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Server",
+							"value": "nginx/1.27.1"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 27 Feb 2025 14:43:25 GMT"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "X-Powered-By",
+							"value": "PHP/8.3.11"
+						},
+						{
+							"name": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"content": {
+						"size": 139,
+						"mimeType": "application/json; charset=UTF-8",
+						"text": "{\"id\":\"5\",\"name\":\"Daniel \",\"email\":\"je@moeder.nl\",\"password\":\"$2y$10$EkEYgS9xEPHuK7RNEVoQr.0VC0CXsrx\\/e.9NK9Oyi9G6pQ8IdyqnO\",\"role\":\"user\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 54.605000000000004,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Update"
+			},
+			{
+				"startedDateTime": "2025-02-27T14:50:56.625Z",
+				"time": 137.824,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost/api/users",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "PHPSESSID",
+							"value": "5e8eabefd9873a36d367d8ac3139212f",
+							"path": "/",
+							"domain": "localhost"
+						}
+					],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.3.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"name\": \"Daniel\",\n\t\"email\": \"dtzwart@gmail.com\",\n\t\"password\": \"Nope\",\n\t\"role\": \"content\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Server",
+							"value": "nginx/1.27.1"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 27 Feb 2025 14:42:44 GMT"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "X-Powered-By",
+							"value": "PHP/8.3.11"
+						},
+						{
+							"name": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"content": {
+						"size": 86,
+						"mimeType": "application/json; charset=UTF-8",
+						"text": "{\"id\":\"4\",\"name\":\"Daniel\",\"email\":\"dtzwart@gmail.com\",\"password\":\"Nope\",\"role\":\"user\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 137.824,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Create New"
+			},
+			{
+				"startedDateTime": "2025-02-27T14:50:56.625Z",
+				"time": 106.786,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost/api/users/5",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "PHPSESSID",
+							"value": "5e8eabefd9873a36d367d8ac3139212f",
+							"path": "/",
+							"domain": "localhost"
+						}
+					],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.3.1"
+						}
+					],
+					"queryString": [
+						{
+							"name": "",
+							"value": ""
+						}
+					],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 404,
+					"statusText": "Not Found",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Server",
+							"value": "nginx/1.27.1"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 27 Feb 2025 14:49:03 GMT"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "X-Powered-By",
+							"value": "PHP/8.3.11"
+						},
+						{
+							"name": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"content": {
+						"size": 33,
+						"mimeType": "application/json; charset=UTF-8",
+						"text": "{\"errorMessage\":\"User not found\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 106.786,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Get One By Id"
+			},
+			{
+				"startedDateTime": "2025-02-27T14:50:56.625Z",
+				"time": 104.14099999999999,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost/api/users",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [
+						{
+							"name": "PHPSESSID",
+							"value": "5e8eabefd9873a36d367d8ac3139212f",
+							"path": "/",
+							"domain": "localhost"
+						}
+					],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/10.3.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "OK",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Server",
+							"value": "nginx/1.27.1"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 27 Feb 2025 14:46:06 GMT"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"name": "X-Powered-By",
+							"value": "PHP/8.3.11"
+						},
+						{
+							"name": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"name": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"name": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"content": {
+						"size": 535,
+						"mimeType": "application/json; charset=UTF-8",
+						"text": "[{\"id\":\"1\",\"name\":\"Administrator\",\"email\":\"admin@admin.nl\",\"password\":\"$2y$10$EkEYgS9xEPHuK7RNEVoQr.0VC0CXsrx\\/e.9NK9Oyi9G6pQ8IdyqnO\",\"role\":\"admin\"},{\"id\":\"2\",\"name\":\"ContentManager\",\"email\":\"content@content.nl\",\"password\":\"$2y$10$EkEYgS9xEPHuK7RNEVoQr.0VC0CXsrx\\/e.9NK9Oyi9G6pQ8IdyqnO\",\"role\":\"content\"},{\"id\":\"3\",\"name\":\"Gebruiker\",\"email\":\"user@user.nl\",\"password\":\"$2y$10$EkEYgS9xEPHuK7RNEVoQr.0VC0CXsrx\\/e.9NK9Oyi9G6pQ8IdyqnO\",\"role\":\"user\"},{\"id\":\"4\",\"name\":\"Daniel\",\"email\":\"dtzwart@gmail.com\",\"password\":\"Nope\",\"role\":\"user\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 104.14099999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Get All"
+			}
+		]
+	}
+}

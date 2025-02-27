@@ -14,7 +14,7 @@ class UserService
         $this->userRepository = new UserRepository();
     }
 
-    public function fetchOneByEmail ($email): User
+    public function fetchOneByEmail ($email): User|null
     {
         return $this->userRepository->fetchOneByEmail($email);
     }
@@ -24,7 +24,7 @@ class UserService
         return $this->userRepository->create($user);
     }
 
-    public function fetchOneById($id) : User
+    public function fetchOneById($id) : User|null
     {
         return $this->userRepository->fetchOneById($id);
     }
