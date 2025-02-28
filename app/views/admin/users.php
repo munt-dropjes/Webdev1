@@ -5,15 +5,9 @@
 ?>
 
 <script>
-    function getAllUsers() {
-        $users.ajax({
-            url: '/api/users',
-            type: 'GET',
-            success: function(data) {
-                $('users').html(data);
-            }
-        });
-        console.log('ajax');
+    function async getAllUsers() {
+        var response = await fetch('localhost/api/users.json');
+        var usersJson = await response.json();
     }
 </script>
 
