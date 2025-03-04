@@ -2,18 +2,17 @@
     require_once 'admin-navigation.php';
 
     $users = '';
+
+    print_r($users)
 ?>
 
 <script>
     function getAllUsers() {
-        $users.ajax({
-            url: '/api/users',
-            type: 'GET',
-            success: function(data) {
-                $('users').html(data);
-            }
-        });
-        console.log('ajax');
+        fetch('http://localhost/api/users')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('users').innerHTML = JSON.stringify(data);
+            });
     }
 </script>
 
