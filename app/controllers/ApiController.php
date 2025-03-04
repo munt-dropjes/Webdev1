@@ -44,6 +44,7 @@ class ApiController extends Controller
     public function create(){
         try{
             $user = $this->createObjectFromPostedJson('Models\User');
+            $user->password = password_hash($user->password, PASSWORD_DEFAULT);
             $createdUser = $this->userService->create($user);
             $this->respond($createdUser);
         } catch (\Exception $e){

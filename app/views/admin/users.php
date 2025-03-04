@@ -2,8 +2,6 @@
     require_once 'admin-navigation.php';
 
     $users = '';
-
-    print_r($users)
 ?>
 
 <script>
